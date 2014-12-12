@@ -65,7 +65,7 @@
 .px-video-time {
 	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 	float: right;
-	margin-top: 2px;
+	margin-top: 4px;
 	font-size: 14px;
 }
 
@@ -159,6 +159,15 @@
 	clear: both;
 	float: left;
 }
+
+@media only screen and (min-width: 540px) {
+	.px-video-captions-btn-container {
+		clear: none;
+		float: left;
+		margin-left: 25px; /* space between volume slider and captions button */
+	}
+}
+
 .px-video-captions-btn-container label {
 	display: inline-block;
 	width: 25px;
@@ -187,6 +196,12 @@
 	float: right;
 	overflow: hidden;
 	width: 133px; /* width of mute button and width of volume slider */
+}
+
+@media only screen and (min-width: 540px) {
+	.px-video-volume-controls {
+		float: left;
+	}
 }
 
 .px-video-mute-btn-container {
