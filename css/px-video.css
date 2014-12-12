@@ -17,6 +17,10 @@
 }
 
 /* video */
+.px-video-container {
+	min-width: 315px;
+}
+
 .px-video-img-captions-container {
 	position: relative;
 	padding-bottom: 56.25%; /* 16:9 */
