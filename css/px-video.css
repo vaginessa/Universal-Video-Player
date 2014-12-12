@@ -69,14 +69,14 @@
 .px-video-time {
 	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 	float: right;
-	margin-top: 4px;
+	margin-top: 5px;
 	font-size: 14px;
 }
 
 /* caption area */
 .px-video-captions {
 	position: absolute;
-	top: 0;
+	top: 1px; /* stop captions background showing above image */
 	left: 0;
 	width: 100%;
 	padding: .5em;
@@ -168,6 +168,7 @@
 	.px-video-captions-btn-container {
 		clear: none;
 		float: left;
+		margin-top: 1px; /* line up with buttons */
 		margin-left: 25px; /* space between volume slider and captions button */
 	}
 }
@@ -205,6 +206,7 @@
 @media only screen and (min-width: 540px) {
 	.px-video-volume-controls {
 		float: left;
+		margin-top: 1px;
 	}
 }
 
