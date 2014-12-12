@@ -186,17 +186,12 @@
 .px-video-volume-controls {
 	float: right;
 	overflow: hidden;
-	width: 146px; /* width of mute button and width of volume slider */
+	width: 133px; /* width of mute button and width of volume slider */
 }
 
 .px-video-mute-btn-container {
 	float: left;
 	width: 26px; /* width of mute button */
-}
-
-.px-video-volume-slider {
-	float: left;
-	width: 120px; /* width of volume slider */
 }
 
 .px-video-mute-btn-container label {
@@ -229,11 +224,18 @@
 }
 
 /* volume range input */
+.px-video-volume-slider {
+	float: left;
+	width: 107px; /* width of volume slider */
+}
+
 .px-video-controls input[type='range'] {
 	-webkit-appearance: none;
 	height: 6px;
 	width: 100px;
 	margin-top: 8px;
+	margin-right: 0;
+	margin-left: 5px;
 	background-color: #E6E6E6;
 	outline:none;
 }
