@@ -91,7 +91,7 @@ function InitPxVideo(options) {
 			browserName = "Firefox";
 			fullVersion = nAgt.substring(verOffset+8);
 		}
-		// In most other browsers, "name/version" is at the end of userAgent 
+		// In most other browsers, "name/version" is at the end of userAgent
 		else if ( (nameOffset=nAgt.lastIndexOf(' ')+1) < (verOffset=nAgt.lastIndexOf('/')) ) {
 			browserName = nAgt.substring(nameOffset,verOffset);
 			fullVersion = nAgt.substring(verOffset+1);
@@ -109,7 +109,7 @@ function InitPxVideo(options) {
 		// Get major version
 		majorVersion = parseInt(''+fullVersion,10);
 		if (isNaN(majorVersion)) {
-			fullVersion = ''+parseFloat(navigator.appVersion); 
+			fullVersion = ''+parseFloat(navigator.appVersion);
 			majorVersion = parseInt(navigator.appVersion,10);
 		}
 		// Return data
@@ -161,48 +161,41 @@ function InitPxVideo(options) {
 
 	// Remove native video controls
 	obj.movie.removeAttribute("controls");
-	
+
 	// Generate random number for ID/FOR attribute values for controls
 	obj.randomNum = Math.floor(Math.random() * (10000));
-	
+
 	// Insert custom video controls
 	if (options.debug) {
 		console.log("Inserting custom video controls");
 	}
-	obj.controls.innerHTML = '<div class="clearfix">' + 
-			'<div class="pull-left">' + 
-				'<button class="px-video-restart"><span class="sr-only">Restart</span></button>' + 
-				'<button class="px-video-rewind"><span class="sr-only">rewind <span class="px-seconds">10</span> seconds</span></button>' + 
-				'<button class="px-video-play" aria-label="'+obj.playAriaLabel+'"><span class="sr-only">Play</span></button>' + 
-				'<button class="px-video-pause hide"><span class="sr-only">Pause</span></button>' + 
-				'<button class="px-video-forward"><span class="sr-only">forward <span class="px-seconds">10</span> seconds</span></button>' + 
-			'</div>' + 
-			'<div class="px-video-mute-btn-container pull-left">' + 
-				'<input class="px-video-mute sr-only" id="btnMute'+obj.randomNum+'" type="checkbox" />' + 
-				'<label id="labelMute'+obj.randomNum+'" for="btnMute'+obj.randomNum+'"><span class="sr-only">Mute</span></label>' + 
-			'</div>' + 
-			'<div class="pull-left">' + 
-				'<label for="volume'+obj.randomNum+'" class="sr-only">Volume:</label><input id="volume'+obj.randomNum+'" class="px-video-volume" type="range" min="0" max="10" value="5" />' + 
-			'</div>' + 
-			'<div class="px-video-captions-btn-container pull-left hide">' + 
-				'<input class="px-video-btnCaptions sr-only" id="btnCaptions'+obj.randomNum+'" type="checkbox" />' + 
-				'<label for="btnCaptions'+obj.randomNum+'"><span class="sr-only">Captions</span></label>' + 
-			'</div>' + 
-			'<div class="px-video-time">' + 
-				'<span class="sr-only">time</span> <span class="px-video-duration">00:00</span>' + 
-			'</div>' + 
-		'</div>' + 
-		'<div>' + 
-			'<progress class="px-video-progress" max="100" value="0"><span>0</span>% played</progress>' + 
+	obj.controls.innerHTML = '<div class="clearfix">' +
+			'<div class="pull-left">' +
+				'<button class="px-video-restart"><span class="sr-only">Restart</span></button>' +
+				'<button class="px-video-rewind"><span class="sr-only">rewind <span class="px-seconds">10</span> seconds</span></button>' +
+				'<button class="px-video-play" aria-label="'+obj.playAriaLabel+'"><span class="sr-only">Play</span></button>' +
+				'<button class="px-video-pause hide"><span class="sr-only">Pause</span></button>' +
+				'<button class="px-video-forward"><span class="sr-only">forward <span class="px-seconds">10</span> seconds</span></button>' +
+			'</div>' +
+			'<div class="px-video-mute-btn-container pull-left">' +
+				'<input class="px-video-mute sr-only" id="btnMute'+obj.randomNum+'" type="checkbox" />' +
+				'<label id="labelMute'+obj.randomNum+'" for="btnMute'+obj.randomNum+'"><span class="sr-only">Mute</span></label>' +
+			'</div>' +
+			'<div class="pull-left">' +
+				'<label for="volume'+obj.randomNum+'" class="sr-only">Volume:</label><input id="volume'+obj.randomNum+'" class="px-video-volume" type="range" min="0" max="10" value="5" />' +
+			'</div>' +
+			'<div class="px-video-captions-btn-container pull-left hide">' +
+				'<input class="px-video-btnCaptions sr-only" id="btnCaptions'+obj.randomNum+'" type="checkbox" />' +
+				'<label for="btnCaptions'+obj.randomNum+'"><span class="sr-only">Captions</span></label>' +
+			'</div>' +
+			'<div class="px-video-time">' +
+				'<span class="sr-only">time</span> <span class="px-video-duration">00:00</span>' +
+			'</div>' +
+		'</div>' +
+		'<div>' +
+			'<progress class="px-video-progress" max="100" value="0"><span>0</span>% played</progress>' +
 		'</div>';
 
-	// Adjust layout per width of video - container
-	obj.movieWidth = obj.movie.width;
-	if (obj.movieWidth < 360) {
-		obj.movieWidth = 360;
-	}
-	obj.container.setAttribute("style", "width:" + obj.movieWidth + "px");
-	
 	// Adjust layout per width of video - controls/mute offset
 	obj.labelMute = document.getElementById("labelMute" + obj.randomNum);
 	obj.labelMuteOffset = obj.movieWidth - 390;
@@ -250,7 +243,7 @@ function InitPxVideo(options) {
 		options.seekInterval = 10;
 	}
 	obj.seekInterval = options.seekInterval;
-	
+
 	// Get the elements for the controls
 	obj.btnPlay = obj.container.getElementsByClassName('px-video-play')[0];
 	obj.btnPause = obj.container.getElementsByClassName('px-video-pause')[0];
@@ -287,7 +280,7 @@ function InitPxVideo(options) {
 
 	// Pause
 	obj.btnPause.addEventListener('click', function() {
-		obj.movie.pause(); 
+		obj.movie.pause();
 		obj.btnPlay.className = "px-video-play px-video-show-inline";
 		obj.btnPause.className = "px-video-pause hide";
 		obj.btnPlay.focus();
@@ -312,10 +305,10 @@ function InitPxVideo(options) {
 
 	// Rewind
 	obj.btnRewind.addEventListener('click', function() {
-	    var targetTime = obj.movie.currentTime - obj.seekInterval;
-	    if (targetTime < 0) {
-	      obj.movie.currentTime = 0;
-	    }
+		var targetTime = obj.movie.currentTime - obj.seekInterval;
+		if (targetTime < 0) {
+			obj.movie.currentTime = 0;
+		}
 	    else {
 	      obj.movie.currentTime = targetTime;
 	    }
@@ -354,12 +347,12 @@ function InitPxVideo(options) {
 			obj.movie.muted = true;
 		}
 	}, false);
-	
+
 	// Duration
 	obj.movie.addEventListener("timeupdate", function() {
 		obj.secs = parseInt(obj.movie.currentTime % 60);
 		obj.mins = parseInt((obj.movie.currentTime / 60) % 60);
-		
+
 		// Ensure it's two digits. For example, 03 rather than 3.
 		obj.secs = ("0" + obj.secs).slice(-2);
 		obj.mins = ("0" + obj.mins).slice(-2);
@@ -381,7 +374,7 @@ function InitPxVideo(options) {
 	obj.progressBar.addEventListener('click', function(e) {
 		obj.pos = (e.pageX - this.offsetLeft) / this.offsetWidth;
 		obj.movie.currentTime = obj.pos * obj.movie.duration;
-		
+
 		// Special handling for "manual" captions
 		if (!obj.isTextTracks) {
 			adjustManualCaptions(obj);
@@ -398,7 +391,7 @@ function InitPxVideo(options) {
 	// ***
 
 	// Toggle display of captions via captions button
-	obj.captionsBtn.addEventListener('click', function() { 
+	obj.captionsBtn.addEventListener('click', function() {
 		if (this.checked) {
 			obj.captionsContainer.className = "px-video-captions show";
 		} else {
@@ -415,16 +408,16 @@ function InitPxVideo(options) {
 	else {
 
 		// If IE 10/11 or Firefox 31+ or Safari 7+, don't use native captioning (still doesn't work although they claim it's now supported)
-		if ((obj.browserName==="IE" && obj.browserMajorVersion===10) || 
-				(obj.browserName==="IE" && obj.browserMajorVersion===11) || 
-				(obj.browserName==="Firefox" && obj.browserMajorVersion>=31) || 
+		if ((obj.browserName==="IE" && obj.browserMajorVersion===10) ||
+				(obj.browserName==="IE" && obj.browserMajorVersion===11) ||
+				(obj.browserName==="Firefox" && obj.browserMajorVersion>=31) ||
 				(obj.browserName==="Safari" && obj.browserMajorVersion>=7)) {
 			if (options.debug) {
 				console.log("Detected IE 10/11 or Firefox 31+ or Safari 7+");
 			}
 			// set to false so skips to 'manual' captioning
 			obj.isTextTracks = false;
-			
+
 			// turn off native caption rendering to avoid double captions [doesn't work in Safari 7; see patch below]
 			var track = {};
 			var tracks = obj.movie.textTracks;
@@ -471,12 +464,12 @@ function InitPxVideo(options) {
 
 			obj.movie.addEventListener('timeupdate', function() {
 				// Check if the next caption is in the current time range
-				if (obj.movie.currentTime.toFixed(1) > video_timecode_min(obj.captions[obj.subcount][0]) && 
+				if (obj.movie.currentTime.toFixed(1) > video_timecode_min(obj.captions[obj.subcount][0]) &&
 					obj.movie.currentTime.toFixed(1) < video_timecode_max(obj.captions[obj.subcount][0])) {
 						obj.currentCaption = obj.captions[obj.subcount][1];
 				}
 				// Is there a next timecode?
-				if (obj.movie.currentTime.toFixed(1) > video_timecode_max(obj.captions[obj.subcount][0]) && 
+				if (obj.movie.currentTime.toFixed(1) > video_timecode_max(obj.captions[obj.subcount][0]) &&
 					obj.subcount < (obj.captions.length-1)) {
 						obj.subcount++;
 				}
@@ -498,9 +491,9 @@ function InitPxVideo(options) {
 							if (options.debug) {
 								console.log("xhr = 200");
 							}
-							
+
 							obj.captions = [];
-							var records = [], 
+							var records = [],
 								record,
 								req = xhr.responseText;
 							records = req.split('\n\n');
