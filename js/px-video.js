@@ -169,7 +169,7 @@ function InitPxVideo(options) {
 	if (options.debug) {
 		console.log("Inserting custom video controls");
 	}
-	obj.controls.innerHTML = '<div class="clearfix">' +
+	obj.controls.innerHTML = '<div class="controls">' +
 			'<div class="pull-left">' +
 				'<button class="px-video-restart"><span class="sr-only">Restart</span></button>' +
 				'<button class="px-video-rewind"><span class="sr-only">rewind <span class="px-seconds">10</span> seconds</span></button>' +
