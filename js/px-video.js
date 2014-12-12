@@ -45,9 +45,9 @@ function InitPxVideo(options) {
 
 	// Display captions container and button (for initialization)
 	function showCaptionContainerAndButton(obj) {
-		obj.captionsBtnContainer.className = "px-video-captions-btn-container pull-left show";
+		obj.captionsBtnContainer.className = "px-video-captions-btn-container show";
 		if (obj.isCaptionDefault) {
-			obj.captionsContainer.className = "px-video-captions pull-left show";
+			obj.captionsContainer.className = "px-video-captions show";
 			obj.captionsBtn.setAttribute("checked", "checked");
 		}
 	}
@@ -177,12 +177,14 @@ function InitPxVideo(options) {
 				'<button class="px-video-pause hide"><span class="sr-only">Pause</span></button>' +
 				'<button class="px-video-forward"><span class="sr-only">forward <span class="px-seconds">10</span> seconds</span></button>' +
 			'</div>' +
-			'<div class="px-video-mute-btn-container">' +
-				'<input class="px-video-mute sr-only" id="btnMute'+obj.randomNum+'" type="checkbox" />' +
-				'<label id="labelMute'+obj.randomNum+'" for="btnMute'+obj.randomNum+'"><span class="sr-only">Mute</span></label>' +
-			'</div>' +
-			'<div class="px-video-volume">' +
-				'<label for="volume'+obj.randomNum+'" class="sr-only">Volume:</label><input id="volume'+obj.randomNum+'" class="px-video-volume" type="range" min="0" max="10" value="5" />' +
+			'<div class="px-video-volume-controls">' +
+				'<div class="px-video-mute-btn-container">' +
+					'<input class="px-video-mute sr-only" id="btnMute'+obj.randomNum+'" type="checkbox" />' +
+					'<label id="labelMute'+obj.randomNum+'" for="btnMute'+obj.randomNum+'"><span class="sr-only">Mute</span></label>' +
+				'</div>' +
+				'<div class="px-video-volume-slider">' +
+					'<label for="volume'+obj.randomNum+'" class="sr-only">Volume:</label><input id="volume'+obj.randomNum+'" class="px-video-volume" type="range" min="0" max="10" value="5" />' +
+				'</div>' +
 			'</div>' +
 			'<div class="px-video-captions-btn-container hide">' +
 				'<input class="px-video-btnCaptions sr-only" id="btnCaptions'+obj.randomNum+'" type="checkbox" />' +

@@ -1,8 +1,5 @@
 
 /* utilities */
-.pull-left {
-	float: left;
-}
 .sr-only {
 	position: absolute !important;
 	clip: rect(1px, 1px, 1px, 1px);
@@ -41,6 +38,10 @@
 
 .px-video-img-captions-container {
 	position: relative;
+}
+
+.px-video-controls {
+	margin-top: 5px; /* put some spacing between video and controls to stop mis-tapping/clicking */
 }
 
 /* progress indicator */
@@ -84,6 +85,12 @@
 }
 
 /* buttons */
+.px-video-playback-buttons {
+	float: left;
+	padding-right: 25px; /* offset width of restart button so play/pause buttons always appear in the middle */
+	width: 140px; /* accommodate width of buttons */
+}
+
 .px-video-controls button {
 	border: 1px #fff solid;
 	background: transparent;
@@ -148,11 +155,14 @@
 }
 
 /* captions button */
+.px-video-captions-btn-container {
+	clear: both;
+	float: left;
+}
 .px-video-captions-btn-container label {
 	display: inline-block;
 	width: 25px;
 	height: 20px;
-	margin-left: 25px;
 	background: no-repeat url('../images/px-video-sprite.png');
 	background-position: -6px -835px;
 }
@@ -173,11 +183,26 @@
 }
 
 /* mute button */
+.px-video-volume-controls {
+	float: right;
+	overflow: hidden;
+	width: 146px; /* width of mute button and width of volume slider */
+}
+
+.px-video-mute-btn-container {
+	float: left;
+	width: 26px; /* width of mute button */
+}
+
+.px-video-volume-slider {
+	float: left;
+	width: 120px; /* width of volume slider */
+}
+
 .px-video-mute-btn-container label {
 	display: inline-block;
 	width: 25px;
 	height: 20px;
-	margin-left: 240px;
 	margin-top: 2px;
 	background: no-repeat url('../images/px-video-sprite.png');
 	background-position: -6px -476px;
