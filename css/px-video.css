@@ -103,8 +103,14 @@
 	width: 25px;
 	height: 20px;
 	overflow: hidden;
+	background: no-repeat url('../images/px-video-sprite.svg');
+}
+
+/* use with Modernizr to provide a no-svg class on <html> to support browsers that don't support SVG */
+.no-svg .px-video-controls button {
 	background: no-repeat url('../images/px-video-sprite.png');
 }
+
 .px-video-controls button:focus {
 	border: 1px #999 dotted;
 	outline: none;
@@ -177,9 +183,15 @@
 	display: inline-block;
 	width: 25px;
 	height: 20px;
-	background: no-repeat url('../images/px-video-sprite.png');
+	background: no-repeat url('../images/px-video-sprite.svg');
 	background-position: -6px -835px;
 }
+
+/* use with Modernizr to provide a no-svg class on <html> to support browsers that don't support SVG */
+.no-svg .px-video-captions-btn-container label {
+	background: no-repeat url('../images/px-video-sprite.png');
+}
+
 .px-video-captions-btn-container input[type="checkbox"]:focus+label {
 	outline: 1px #999 dotted;
 	background-position: -6px -799px;
@@ -220,9 +232,15 @@
 	width: 25px;
 	height: 20px;
 	margin-top: 2px;
-	background: no-repeat url('../images/px-video-sprite.png');
+	background: no-repeat url('../images/px-video-sprite.svg');
 	background-position: -6px -476px;
 }
+
+/* use with Modernizr to provide a no-svg class on <html> to support browsers that don't support SVG */
+.no-svg .px-video-mute-btn-container label {
+	background: no-repeat url('../images/px-video-sprite.png');
+}
+
 .px-video-mute-btn-container input[type="checkbox"]:focus+label {
 	outline: 1px #999 dotted;
 	background-position: -6px -440px;
