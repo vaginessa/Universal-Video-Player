@@ -2,13 +2,12 @@
 <html lang="en">
 <head>
      <meta charset="utf-8" />
-     <title>Accessible HTML5 Video Player</title>
+     <title>Responsive Accessible HTML5 Video Player</title>
      <meta name="description" content="Custom HTML5 video controls and WebVTT captions." />
-     <meta name="author" content="Dennis Lembree, PayPal" />
      <meta name="viewport" content="width=device-width, initial-scale=1" />
 
 <!-- PX-VIDEO CSS -->
-<link rel="stylesheet" href="css/px-video.css" />
+<link rel="stylesheet" href="../css/px-video.css" />
 
 </head>
 
@@ -16,23 +15,23 @@
 
 <div id="wrapper">
 
-<h1> Accessible HTML5 Video Player</h1>
+<h1>Responsive Accessible HTML5 Video Player</h1>
 
 <div class="px-video-container" id="myvid">
 	<div class="px-video-img-captions-container">
 		<div class="px-video-captions hide"></div>
-		<video poster="media/indie-launch.jpg" class="px-video" controls>
+		<video poster="../media/indie-launch.jpg" class="px-video" controls>
 			<!-- video files -->
-			<source src="media/indie-launch.mp4" type="video/mp4" />
-			<source src="media/indie-launch.webm" type="video/webm" />
+			<source src="../media/indie-launch.mp4" type="video/mp4" />
+			<source src="../media/indie-launch.webm" type="video/webm" />
 
 			<!-- text track file -->
-			<track kind="captions" label="English captions" src="media/captions_PayPal_Austin_en.vtt" srclang="en" default />
+			<track kind="captions" label="English captions" src="../media/captions_PayPal_Austin_en.vtt" srclang="en" default />
 
 			<!-- fallback for browsers that don't support the video element -->
 			<div>
-				<a href="media/indie-launch.mp4">
-					<img src="media/indie-launch.jpg" alt="download video" />
+				<a href="../media/indie-launch.mp4">
+					<img src="../media/indie-launch.jpg" alt="download video" />
 				</a>
 			</div>
 		</video>
@@ -42,7 +41,7 @@
 
 </div><!-- end page wrapper container -->
 
-<script src="js/px-video.js"></script>
+<script src="../js/px-video.js"></script>
 
 <script>
 
@@ -51,7 +50,7 @@ new InitPxVideo({
 	"videoId": "myvid",
 	"captionsOnDefault": true,
 	"seekInterval": 20,
-	"videoTitle": "PayPal Austin promo",
+	"videoTitle": "Ind.ie Launch",
 	"debug": true
 });
 
