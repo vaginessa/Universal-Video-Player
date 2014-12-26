@@ -98,8 +98,7 @@
 /* buttons */
 .px-video-playback-buttons {
 	float: left;
-	line-height: 40px;
-	padding-right: 25px; /* offset width of restart button so play/pause buttons always appear in the middle */
+	line-height: 20px;
 	width: 140px; /* accommodate width of buttons */
 }
 
@@ -109,7 +108,7 @@
 	padding: 0;
 	margin: 0 5px;
 	width: 25px;
-	height: 30px;
+	height: 25px;
 	overflow: hidden;
 	background: no-repeat url('../images/px-video-sprite.svg');
 }
@@ -129,47 +128,47 @@
 
 /* restart button */
 .px-video-controls button.px-video-restart {
-	background-position: -9px -333px;
+	background-position: -9px -331px;
 }
 .px-video-controls button.px-video-restart:hover,
 .px-video-controls button.px-video-restart:focus {
-	background-position: -9px -297px;
+	background-position: -9px -295px;
 }
 
 /* rewind button */
 .px-video-controls button.px-video-rewind {
-	background-position: -11px -189px;
+	background-position: -11px -187px;
 }
 .px-video-controls button.px-video-rewind:hover,
 .px-video-controls button.px-video-rewind:focus {
-	background-position: -11px -153px;
+	background-position: -11px -151px;
 }
 
 /* play button */
 .px-video-controls button.px-video-play {
-	background-position: -11px -45px;
+	background-position: -11px -43px;
 }
 .px-video-controls button.px-video-play:hover,
 .px-video-controls button.px-video-play:focus {
-	background-position: -11px -9px;
+	background-position: -11px -7px;
 }
 
 /* pause button */
 .px-video-controls button.px-video-pause {
-	background-position: -11px -117px;
+	background-position: -11px -115px;
 }
 .px-video-controls button.px-video-pause:hover,
 .px-video-controls button.px-video-pause:focus {
-	background-position: -11px -81px;
+	background-position: -11px -79px;
 }
 
 /* forward button */
 .px-video-controls button.px-video-forward {
-	background-position: -13px -261px;
+	background-position: -13px -259px;
 }
 .px-video-controls button.px-video-forward:hover,
 .px-video-controls button.px-video-forward:focus {
-	background-position: -13px -225px;
+	background-position: -13px -223px;
 }
 
 /* captions button */
