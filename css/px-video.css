@@ -348,7 +348,7 @@
 @media only screen and (min-width: 620px) {
 	.px-video-volume-controls {
 		margin-top: 7px; /* line up with big buttons */
-		width: 25%;
+		width: 35%;
 	}
 }
 
