@@ -79,7 +79,9 @@
 }
 
 .px-video-controls {
+	margin-bottom: 10px; /* a little space below the player */
 	margin-top: 10px; /* put some spacing between video and controls to stop mis-tapping/clicking */
+	overflow: hidden; /* clear floats so controls don't get hidden by objects below */
 }
 
 /* progress indicator */
