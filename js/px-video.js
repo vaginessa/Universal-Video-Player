@@ -173,6 +173,9 @@ function InitPxVideo(options) {
 			'<progress class="px-video-progress" max="100" value="0"><span>0</span>% played</progress>' +
 		'</div>' +
 		'<div class="controls">' +
+			'<div class="px-video-time">' +
+				'<span class="sr-only">time</span> <span class="px-video-duration">00:00</span>' +
+			'</div>' +
 			'<div class="px-video-playback-buttons">' +
 				'<button class="px-video-restart"><span class="sr-only">Restart</span></button>' +
 				'<button class="px-video-rewind"><span class="sr-only">rewind <span class="px-seconds">10</span> seconds</span></button>' +
@@ -192,9 +195,6 @@ function InitPxVideo(options) {
 			'<div class="px-video-captions-btn-container hide">' +
 				'<input class="px-video-btnCaptions sr-only" id="btnCaptions'+obj.randomNum+'" type="checkbox" />' +
 				'<label for="btnCaptions'+obj.randomNum+'"><span class="sr-only">Captions</span></label>' +
-			'</div>' +
-			'<div class="px-video-time">' +
-				'<span class="sr-only">time</span> <span class="px-video-duration">00:00</span>' +
 			'</div>' +
 		'</div>';
 
