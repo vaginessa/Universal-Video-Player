@@ -169,7 +169,10 @@ function InitPxVideo(options) {
 	if (options.debug) {
 		console.log("Inserting custom video controls");
 	}
-	obj.controls.innerHTML = '<div class="controls">' +
+	obj.controls.innerHTML = '<div class="progress-bar">' +
+			'<progress class="px-video-progress" max="100" value="0"><span>0</span>% played</progress>' +
+		'</div>' +
+		'<div class="controls">' +
 			'<div class="px-video-playback-buttons">' +
 				'<button class="px-video-restart"><span class="sr-only">Restart</span></button>' +
 				'<button class="px-video-rewind"><span class="sr-only">rewind <span class="px-seconds">10</span> seconds</span></button>' +
@@ -193,9 +196,6 @@ function InitPxVideo(options) {
 			'<div class="px-video-time">' +
 				'<span class="sr-only">time</span> <span class="px-video-duration">00:00</span>' +
 			'</div>' +
-		'</div>' +
-		'<div>' +
-			'<progress class="px-video-progress" max="100" value="0"><span>0</span>% played</progress>' +
 		'</div>';
 
 	// Get URL of caption file if exists
@@ -303,9 +303,9 @@ function InitPxVideo(options) {
 		if (targetTime < 0) {
 			obj.movie.currentTime = 0;
 		}
-	    else {
-	      obj.movie.currentTime = targetTime;
-	    }
+		else {
+			obj.movie.currentTime = targetTime;
+		}
 		// Special handling for "manual" captions
 		if (!obj.isTextTracks) {
 			adjustManualCaptions(obj);
@@ -314,7 +314,7 @@ function InitPxVideo(options) {
 
 	// Fast forward
 	obj.btnForward.addEventListener('click', function() {
-	    var targetTime = obj.movie.currentTime + obj.seekInterval;
+		var targetTime = obj.movie.currentTime + obj.seekInterval;
 		if (targetTime > obj.movie.duration) {
 			obj.movie.currentTime = obj.movie.duration;
 		}
