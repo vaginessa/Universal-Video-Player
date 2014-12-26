@@ -133,6 +133,17 @@
 	width: 50%; /* half width of player */
 }
 
+@media only screen and (min-width: 620px) {
+	.px-video-playback-buttons { /* centre the playback buttons when the viewport is wider */
+		float: none;
+		left: 50%;
+		margin-left: -120px; /* half width of button container + width of repeat button, so play button is central */
+		min-width: 200px;
+		position: absolute;
+		width: 200px; /* accommodate width of new, wider buttons */
+	}
+}
+
 .px-video-controls button {
 	border: 1px #fff solid;
 	background: transparent;
@@ -142,6 +153,14 @@
 	height: 25px;
 	overflow: hidden;
 	background: no-repeat url('../images/px-video-sprite.svg');
+}
+
+@media only screen and (min-width: 620px) {
+	.px-video-controls button {
+		background-size: 150%;
+		width: 40px;
+		height: 40px;
+	}
 }
 
 /* use with Modernizr to provide a no-svg class on <html> to support browsers that don't support SVG */
@@ -161,27 +180,69 @@
 .px-video-controls button.px-video-restart {
 	background-position: -9px -331px;
 }
+
+@media only screen and (min-width: 620px) {
+	.px-video-controls button.px-video-restart {
+		background-position: -9px -523px;
+	}
+}
+
 .px-video-controls button.px-video-restart:hover,
 .px-video-controls button.px-video-restart:focus {
 	background-position: -9px -295px;
+}
+
+@media only screen and (min-width: 620px) {
+	.px-video-controls button.px-video-restart:hover,
+	.px-video-controls button.px-video-restart:focus {
+		background-position: -9px -466px;
+	}
 }
 
 /* rewind button */
 .px-video-controls button.px-video-rewind {
 	background-position: -11px -187px;
 }
+
+@media only screen and (min-width: 620px) {
+	.px-video-controls button.px-video-rewind {
+		background-position: -11px -295px;
+	}
+}
+
 .px-video-controls button.px-video-rewind:hover,
 .px-video-controls button.px-video-rewind:focus {
 	background-position: -11px -151px;
+}
+
+@media only screen and (min-width: 620px) {
+	.px-video-controls button.px-video-rewind:hover,
+	.px-video-controls button.px-video-rewind:focus {
+		background-position: -11px -238px;
+	}
 }
 
 /* play button */
 .px-video-controls button.px-video-play {
 	background-position: -11px -43px;
 }
+
+@media only screen and (min-width: 620px) {
+	.px-video-controls button.px-video-play {
+		background-position: -11px -67px;
+	}
+}
+
 .px-video-controls button.px-video-play:hover,
 .px-video-controls button.px-video-play:focus {
 	background-position: -11px -7px;
+}
+
+@media only screen and (min-width: 620px) {
+	.px-video-controls button.px-video-play:hover,
+	.px-video-controls button.px-video-play:focus {
+		background-position: -11px -10px;
+	}
 }
 
 /* pause button */
@@ -193,6 +254,19 @@
 	background-position: -11px -79px;
 }
 
+@media only screen and (min-width: 620px) {
+	.px-video-controls button.px-video-pause {
+		background-position: -11px -182px;
+	}
+}
+
+@media only screen and (min-width: 620px) {
+	.px-video-controls button.px-video-pause:hover,
+	.px-video-controls button.px-video-pause:focus {
+		background-position: -11px -124px;
+	}
+}
+
 /* forward button */
 .px-video-controls button.px-video-forward {
 	background-position: -13px -259px;
@@ -200,6 +274,19 @@
 .px-video-controls button.px-video-forward:hover,
 .px-video-controls button.px-video-forward:focus {
 	background-position: -13px -223px;
+}
+
+@media only screen and (min-width: 620px) {
+	.px-video-controls button.px-video-forward {
+		background-position: -13px -409px;
+	}
+}
+
+@media only screen and (min-width: 620px) {
+	.px-video-controls button.px-video-forward:hover,
+	.px-video-controls button.px-video-forward:focus {
+		background-position: -13px -352px;
+	}
 }
 
 /* captions button */
@@ -254,8 +341,14 @@
 
 @media only screen and (min-width: 540px) {
 	.px-video-volume-controls {
-		float: left;
 		margin-top: 1px;
+	}
+}
+
+@media only screen and (min-width: 620px) {
+	.px-video-volume-controls {
+		margin-top: 7px; /* line up with big buttons */
+		width: 25%;
 	}
 }
 
@@ -303,6 +396,10 @@
 .px-video-volume-slider {
 	float: right;
 	width: 95px; /* width of volume slider */
+}
+
+.px-video-controls .controls {
+	position: relative;
 }
 
 .px-video-controls input[type='range'] {
