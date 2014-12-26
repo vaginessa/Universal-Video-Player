@@ -44,14 +44,19 @@
 	position: relative;
 }
 
+.progress-bar {
+	width: 85%;
+}
+
 .px-video-controls {
-	margin-top: 0; /* (REMOVED) put some spacing between video and controls to stop mis-tapping/clicking */
+	margin-top: 10px; /* put some spacing between video and controls to stop mis-tapping/clicking */
 }
 
 /* progress indicator */
 .px-video-progress {
 	display: block;
 	width: 100%;
+	margin-bottom: 10px;
 	height: 10px;
 }
 .px-video-progress[value] {
@@ -71,7 +76,7 @@
 	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 	float: right;
 	line-height: 30px;
-	margin-top: 5px;
+	margin-top: -30px; /* bring time up alongside progress timeline */
 	font-size: 14px;
 }
 
