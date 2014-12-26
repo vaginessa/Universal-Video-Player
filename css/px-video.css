@@ -48,6 +48,36 @@
 	width: 85%;
 }
 
+@media only screen and (min-width: 480px) {
+	.progress-bar {
+		width: 90%;
+	}
+}
+
+@media only screen and (min-width: 480px) {
+	.progress-bar {
+		width: 92.5%;
+	}
+}
+
+@media only screen and (min-width: 970px) {
+	.progress-bar {
+		width: 95%;
+	}
+}
+
+@media only screen and (min-width: 970px) {
+	.progress-bar {
+		width: 96%;
+	}
+}
+
+@media only screen and (min-width: 1795px) {
+	.progress-bar {
+		width: 97.5%;
+	}
+}
+
 .px-video-controls {
 	margin-top: 10px; /* put some spacing between video and controls to stop mis-tapping/clicking */
 }
@@ -99,7 +129,8 @@
 .px-video-playback-buttons {
 	float: left;
 	line-height: 20px;
-	width: 140px; /* accommodate width of buttons */
+	min-width: 140px; /* accommodate width of buttons */
+	width: 50%; /* half width of player */
 }
 
 .px-video-controls button {
@@ -173,16 +204,14 @@
 
 /* captions button */
 .px-video-captions-btn-container {
-	clear: both;
-	float: left;
+	float: right;
 }
 
 @media only screen and (min-width: 540px) {
 	.px-video-captions-btn-container {
 		clear: none;
-		float: left;
 		margin-top: 1px; /* line up with buttons */
-		margin-left: 25px; /* space between volume slider and captions button */
+		margin-left: 10px; /* space between volume slider and captions button */
 	}
 }
 
@@ -219,7 +248,8 @@
 .px-video-volume-controls {
 	float: right;
 	overflow: hidden;
-	width: 133px; /* width of mute button and width of volume slider */
+	min-width: 133px; /* width of mute button and width of volume slider */
+	width: 50%; /* half width of player */
 }
 
 @media only screen and (min-width: 540px) {
@@ -230,7 +260,7 @@
 }
 
 .px-video-mute-btn-container {
-	float: left;
+	float: right;
 	width: 26px; /* width of mute button */
 }
 
@@ -271,14 +301,14 @@
 
 /* volume range input */
 .px-video-volume-slider {
-	float: left;
-	width: 107px; /* width of volume slider */
+	float: right;
+	width: 95px; /* width of volume slider */
 }
 
 .px-video-controls input[type='range'] {
 	-webkit-appearance: none;
 	height: 6px;
-	width: 100px;
+	width: 85px;
 	margin-top: 8px;
 	margin-right: 0;
 	margin-left: 5px;
