@@ -18,7 +18,7 @@
 
 /* video */
 .px-video-container {
-	min-width: 315px;
+	min-width: 300px; /* so video controls don't fall in on themselves in narrow browsers */
 }
 
 .px-video-img-captions-container {
