@@ -1,0 +1,235 @@
+WEBVTT
+
+// TODO: needs time codes when video is edited down
+
+00:00:00.000 --> 00:00:00.500
+Today on Spyware 2.0: Privacy
+
+00:00:00.000 --> 00:00:00.500
+When we think of a private conversation, we think of it taking place between two people. And that&#8217;s how it should be &mdash; just between you and the person you&#8217;re having the private conversation with.
+
+00:00:00.000 --> 00:00:00.500
+So, it should be the same on Facebook &mdash; but is it?
+
+00:00:00.000 --> 00:00:00.500
+When you send private messages to your friend on Facebook, it definitely feels like you&#8217;re having a private conversation, but you&#8217;re not. Because you&#8217;re having the conversation in Facebook&#8217;s home. It&#8217;s the home of a total stranger who pays the rent by spying on you.
+
+00:00:00.000 --> 00:00:00.500
+Here&#8217;s how private messages work on Facebook:
+
+00:00:00.000 --> 00:00:00.500
+First, you tell this stranger what you want him to tell your friend.
+
+00:00:00.000 --> 00:00:00.500
+The stranger takes notes (and never forgets) and, finally, he relays your message to your friend.
+
+00:00:00.000 --> 00:00:00.500
+So when Facebook says &ldquo;private&rdquo;, what they really mean is &ldquo;public&rdquo;
+
+00:00:00.000 --> 00:00:00.500
+In the novel 1984, George Orwell called this &ldquo;doublethink&rdquo;.
+
+00:00:00.000 --> 00:00:00.500
+To understand what Facebook, Google, or Twitter mean when they say &ldquo;private&rdquo;, we have to engage in doublethink.
+
+00:00:00.000 --> 00:00:00.500
+So, who is this stranger that we&#8217;re so willing to share our most personal conversations with? Let&#8217;s meet the person behind Facebook, it&#8217;s founder, Mark Zuckerberg.
+
+00:00:00.000 --> 00:00:00.500
+In 2010, in an interview with the New Yorker, Zuckerberg admitted that he had the following IM conversation with a friend at Harvard in the early days of Facebook.
+
+00:00:00.000 --> 00:00:00.500
+<strong>Zuck says:</strong>
+
+00:00:00.000 --> 00:00:00.500
+Yea so if you ever need any info about anyone at harvard
+just ask
+i have over 4000 emails, pictures, addresses, sns [sic]
+
+00:00:00.000 --> 00:00:00.500
+<strong>His friend asks:</strong>
+
+00:00:00.000 --> 00:00:00.500
+what? how&#8217;d you manage that one?
+
+00:00:00.000 --> 00:00:00.500
+<strong>To which Zuck replies:</strong>
+
+00:00:00.000 --> 00:00:00.500
+people just submitted it
+i don&#8217;t know why
+they &ldquo;trust me&rdquo;
+
+00:00:00.000 --> 00:00:00.500
+(and here&#8217;s the best bit&hellip;)
+
+00:00:00.000 --> 00:00:00.500
+dumb fucks
+
+00:00:00.000 --> 00:00:00.500
+So what kind of business does someone build who thinks of people as &ldquo;dumb fucks&rdquo;?
+
+00:00:00.000 --> 00:00:00.500
+A business that mines you for your personal information and profiles  you.
+
+00:00:00.000 --> 00:00:00.500
+A business that tries to understand you as deeply as possible because that&#8217;s the insight that it sells to its customers.
+
+00:00:00.000 --> 00:00:00.500
+A business that studies and analyses you 24/7 to understand how best to manipulate your behaviour.
+
+00:00:00.000 --> 00:00:00.500
+So, the emotional contagion experiment that Facebook published which caused so much uproar wasn&#8217;t a mistake. The only mistake Facebook made was to publish it. It was business as usual for a business where you are the quarry being mined, the livestock being farmed, the lab rats being studied. This is a predator/prey relationship and you&#8217;re the prey.
+
+00:00:00.000 --> 00:00:00.500
+And companies like Facebook share their insight into your life not just with their customers but also with governments.
+
+00:00:00.000 --> 00:00:00.500
+Governments love companies like Facebook and Google because they store information about hundreds of millions of people in one easy to reach location. And, since the information you voluntarily hand over to a third party is not under the same protections under the law it&#8217;s both convenient and cheap for the government to ask Facebook for your data.
+
+00:00:00.000 --> 00:00:00.500
+Needless to say, none of this bodes well for the future of our human rights, our fundamental freedoms, or the health of our democracy.
+
+00:00:00.000 --> 00:00:00.500
+That&#8217;s why we started Indie to create beautiful independent alternatives to the spyware of companies like Facebook and Google. Here&#8217;s a brief look at what we&#8217;re building and how they work.
+
+00:00:00.000 --> 00:00:00.500
+Hello, I&#8217;m Laura, and I have a photo on my phone that I want to share with all of my other devices.
+
+00:00:00.000 --> 00:00:00.500
+So how do I do that?
+
+00:00:00.000 --> 00:00:00.500
+The answer today is to use a cloud service.
+
+00:00:00.000 --> 00:00:00.500
+Here&#8217;s how it works:
+
+00:00:00.000 --> 00:00:00.500
+I upload my photo to a total stranger who then forwards it to all my other devices.
+
+00:00:00.000 --> 00:00:00.500
+This is how Dropbox works, it&#8217;s how Facebook works, and it&#8217;s how Google works.
+
+00:00:00.000 --> 00:00:00.500
+And, of course, they all suffer from Stranger In the Middle Syndrome.
+
+00:00:00.000 --> 00:00:00.500
+But, to get rid of that stranger, we also have to get rid of the cloud. Which leaves me with my original problem.
+
+00:00:00.000 --> 00:00:00.500
+How do I share my photo on all my devices without also sharing it with a stranger?
+
+00:00:00.000 --> 00:00:00.500
+So, here&#8217;s how we&#8217;re solving this problem at Indie:
+
+00:00:00.000 --> 00:00:00.500
+We have a synchronisation engine called Pulse that doesn&#8217;t run on a centralised cloud owned and controlled by a stranger &mdash; it runs directly on all of your own devices.
+
+00:00:00.000 --> 00:00:00.500
+My devices find each other using a Pulse discovery service after which they connect directly to one another and synchronise my photo with no stranger in the middle.
+
+00:00:00.000 --> 00:00:00.500
+Pulse is a low-level synchronisation engine that essentially does what Dropbox or BitTorrent Sync do. Unlike those services, Pulse is free and open software. And it&#8217;s available now. If you&#8217;re technically savvy, you can download and use Pulse today to replace Dropbox and regain some of your privacy.
+
+00:00:00.000 --> 00:00:00.500
+Jo:
+
+00:00:00.000 --> 00:00:00.500
+But what if you&#8217;re not technically savvy or you just can&#8217;t be bothered to set up and configure Pulse?
+
+00:00:00.000 --> 00:00:00.500
+Hi, I&#8217;m Jo, and I want something that&#8217;s as easy to use as Facebook to share my photo with Laura. (But I don&#8217;t want to also share it with a total stranger.)
+
+00:00:00.000 --> 00:00:00.500
+So I go to Indie and I download the Heartbeat app.
+
+00:00:00.000 --> 00:00:00.500
+Laura&#8217;s also got it installed on her computer.
+
+00:00:00.000 --> 00:00:00.500
+I can search for Laura on the Indie web site or straight from the Heartbeat app and I can send her a friend request.
+
+00:00:00.000 --> 00:00:00.500
+Once Laura approves my friend request, we&#8217;re friends on Heartbeat, which means that all our devices are connected to one another and I can send my photo directly to her. Under the hood, Heartbeat uses Pulse to synchronise things between our devices.
+
+00:00:00.000 --> 00:00:00.500
+So Indie introduces us but then steps out of the way so Laura and I can talk directly to one another. Privately. The way it should be.
+
+00:00:00.000 --> 00:00:00.500
+Indie itself runs Waystone. Waystone is like a pub you go to to meet one another. Once you&#8217;ve met and exchanged numbers, you can keep in touch directly without the need to go back to the pub.
+
+00:00:00.000 --> 00:00:00.500
+Waystone and Heartbeat will be available in a private pre-alpha to a small number of our initial supporters at the end of our crowdfunding campaign on Human Rights Day, December 10th, 2014.
+
+00:00:00.000 --> 00:00:00.500
+On the Indie site, you will find a timeline that takes us from today, with Pulse, through to 2015 where out focus will be on building the Indienet &mdash; the distributed social network at the core of the Indie platform &mdash; with Pulse, Heartbeat, and Waystone.
+
+00:00:00.000 --> 00:00:00.500
+Once we have the core platform, we will focus our attention on building the first indie device and its operating system.
+
+00:00:00.000 --> 00:00:00.500
+And even that will only be the beginning.
+
+00:00:00.000 --> 00:00:00.500
+Today, Indie is three full time people: myself (on design and development), Jo (on operations), and Laura (on design and development). We also have two part-time contributors: Andy (on development) and Victor (on industrial design).
+
+00:00:00.000 --> 00:00:00.500
+I&#8217;ve been supporting us for the past year with the sale of a family home &mdash; a flat in Ankara that my family paid into for several decades as part of a cooperative. The flat brought in about £80,000 and that money is now gone.
+
+00:00:00.000 --> 00:00:00.500
+It bought us time to study and understand the problem and to design a viable solution to it. It let us carry out the initial industrial design of the phone and to manufacture a prototype. It allowed us to organise <a href='/summit'>a summit</a> to bring together some of the leading minds who care about this issues and to learn from them. We reached thousands of people in person and tens of thousands more online on platforms including the Royal Society of Arts, The British Science Festival, several TEDx-es, Thinking Digital, and the Internet Governance and Ungovernance Forums.
+
+00:00:00.000 --> 00:00:00.500
+And, finally, it allowed us to make a start on developing the core of the Indie platform.
+
+00:00:00.000 --> 00:00:00.500
+But now we need your help.
+
+00:00:00.000 --> 00:00:00.500
+We need to both continue to cover our expenses and to hire new developers so we can make progress on Pulse, Heartbeat, and Waystone.
+
+00:00:00.000 --> 00:00:00.500
+We want a Go developer to work full-time on Pulse, a Mac and iOS developer to work alongside myself on Heartbeat, a Node.js developer to work with me on Heartbeat and Waystone, and an Android developer to work fulltime on the Android port of Pulse and Heartbeat.
+
+00:00:00.000 --> 00:00:00.500
+Regardless of how the crowdfunding goes, we are going to build this. We&#8217;re in this for life. The level of your support will determine how fast we get there and how effective we can be this year.
+
+00:00:00.000 --> 00:00:00.500
+Please support us and give us the push we need to gather momentum. Help us create a better future.
+
+00:00:00.000 --> 00:00:00.500
+A future where people have safe spaces that are their own. Where private is the default. Where there are no strangers in the middle.
+
+00:00:00.000 --> 00:00:00.500
+Join us, and help us build the future that humanity deserves.
+
+00:00:00.000 --> 00:00:00.500
+Epilogue:
+
+00:00:00.000 --> 00:00:00.500
+ Hello, I&#8217;m Aral
+
+00:00:00.000 --> 00:00:00.500
+I&#8217;m Laura
+
+00:00:00.000 --> 00:00:00.500
+ And I&#8217;m Jo
+
+00:00:00.000 --> 00:00:00.500
+ And as you know, we&#8217;re building independent alternatives to the technologies that spy on us.
+
+00:00:00.000 --> 00:00:00.500
+ Alternatives that protect our fundamental human rights, freedom, and democracy.
+
+00:00:00.000 --> 00:00:00.500
+And we&#8217;d really appreciate your support on November the 8th, and beyond.
+
+00:00:00.000 --> 00:00:00.500
+ Thank you
+
+00:00:00.000 --> 00:00:00.500
+ Thank you
+
+00:00:00.000 --> 00:00:00.500
+Cheers!
