@@ -1,7 +1,7 @@
 Original Work Copyright (c) 2014, eBay Software Foundation
 All rights reserved.
 
-Subsequent Work Copyright (c) 2014, Ind.ie
+Subsequent Work Copyright © 2013-2015 Ind.ie. © Article 12
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification,

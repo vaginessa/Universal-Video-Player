@@ -1,4 +1,4 @@
-#Responsive Accessible HTML5 Video Player
+# Responsive Accessible HTML5 Video Player
 
 ## by Ind.ie, based on work by the PayPal Accessibility Team
 See the [Authors](#authors) section below for details.
@@ -19,14 +19,14 @@ A lightweight responsive HTML5 video player which includes support for captions 
 
 ## Implementation
 
-###CSS and Image
+### CSS and Image
 Insert the CSS in the Head of your HTML document. You'll also need to upload the sprite image (or use your own) and adjust the path in the CSS file.
 
 ```html
 <link rel="stylesheet" href="/css/px-video.css" />
 ```
 
-###HTML
+### HTML
 Insert the HTML5 video markup in the Body of your HTML document. Replace the video, poster, and caption URLs. Modify the sizes of video and fallback image as needed.
 ```html
 <div class="px-video-container" id="myvid">
@@ -55,7 +55,7 @@ Insert the HTML5 video markup in the Body of your HTML document. Replace the vid
 </div><!-- end video container -->
 ```
 
-###JavaScript
+### JavaScript
 Insert the JavaScript file right before the closing Body element of your HTML document. Add a Script element to initialize the video. Options are passed in JSON format. The options are:
 
 - videoId: the value of the ID of the widget container (string) [required]
@@ -106,4 +106,4 @@ Due to Cross-Origin Resource Sharing (CORS), you'll need to run a web server in 
 
 ## Copyright and License
 Original work copyright 2014, eBay Software Foundation under [the BSD license](LICENSE.md)
-Additional work copyright 2014, Ind.ie under [the BSD license](LICENSE.md)
+Additional work copyright © 2013-2015 Ind.ie. © Article 12 under [the BSD license](LICENSE.md)
