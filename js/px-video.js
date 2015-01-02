@@ -45,9 +45,9 @@ function InitPxVideo(options) {
 
 	// Display captions container and button (for initialization)
 	function showCaptionContainerAndButton(obj) {
-		obj.captionsBtnContainer.className = "px-video-captions-btn-container show";
+		obj.captionsBtnContainer.className = "px-video-captions-btn-container pull-left show";
 		if (obj.isCaptionDefault) {
-			obj.captionsContainer.className = "px-video-captions show";
+			obj.captionsContainer.className = "px-video-captions pull-left show";
 			obj.captionsBtn.setAttribute("checked", "checked");
 		}
 	}
@@ -198,6 +198,21 @@ function InitPxVideo(options) {
 			'</div>' +
 		'</div>';
 
+	// Adjust layout per width of video - container
+	obj.movieWidth = obj.movie.width;
+	if (obj.movieWidth < 360) {
+		obj.movieWidth = 360;
+	}
+	// obj.container.setAttribute("style", "width:" + obj.movieWidth + "px");
+
+	// Adjust layout per width of video - controls/mute offset
+	obj.labelMute = document.getElementById("labelMute" + obj.randomNum);
+	obj.labelMuteOffset = obj.movieWidth - 390;
+	if (obj.labelMuteOffset < 0) {
+		obj.labelMuteOffset = 0;
+	}
+	obj.labelMute.setAttribute("style", "margin-left:" + obj.labelMuteOffset + "px");
+
 	// Get URL of caption file if exists
 	var captionSrc = "",
 		kind,
@@ -299,13 +314,13 @@ function InitPxVideo(options) {
 
 	// Rewind
 	obj.btnRewind.addEventListener('click', function() {
-		var targetTime = obj.movie.currentTime - obj.seekInterval;
-		if (targetTime < 0) {
-			obj.movie.currentTime = 0;
-		}
-		else {
-			obj.movie.currentTime = targetTime;
-		}
+	    var targetTime = obj.movie.currentTime - obj.seekInterval;
+	    if (targetTime < 0) {
+	      obj.movie.currentTime = 0;
+	    }
+	    else {
+	      obj.movie.currentTime = targetTime;
+	    }
 		// Special handling for "manual" captions
 		if (!obj.isTextTracks) {
 			adjustManualCaptions(obj);
@@ -314,7 +329,7 @@ function InitPxVideo(options) {
 
 	// Fast forward
 	obj.btnForward.addEventListener('click', function() {
-		var targetTime = obj.movie.currentTime + obj.seekInterval;
+	    var targetTime = obj.movie.currentTime + obj.seekInterval;
 		if (targetTime > obj.movie.duration) {
 			obj.movie.currentTime = obj.movie.duration;
 		}

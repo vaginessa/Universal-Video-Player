@@ -1,4 +1,3 @@
-
 /* utilities */
 .sr-only {
 	position: absolute !important;
@@ -42,6 +41,21 @@
 
 .px-video-img-captions-container {
 	position: relative;
+}
+
+.px-video-wrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	height: 0;
+	z-index: 1;
+}
+
+.px-video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
 
 .progress-bar {
@@ -125,6 +139,7 @@
 	font-size: 1.1em;
 	text-align: center;
 	opacity: 0.75;
+	z-index: 2;
 }
 
 /* buttons */

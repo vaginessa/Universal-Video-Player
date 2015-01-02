@@ -20,22 +20,24 @@
 <div class="px-video-container" id="myvid">
 	<div class="px-video-img-captions-container">
 		<div class="px-video-captions hide"></div>
-		<video poster="../media/indie-launch.jpg" class="px-video" controls>
-			<!-- video files -->
-			<source src="../media/indie-launch.mp4" type="video/mp4" />
-			<source src="../media/indie-launch.webm" type="video/webm" />
-			<source src="../media/indie-launch.ogv" type="video/ogg" />
+		<div class="px-video-wrapper">
+			<video poster="../media/spyware-2.0.jpg" class="px-video" controls>
+				<!-- video files -->
+				<source src="../media/spyware-2.0.mp4" type="video/mp4" />
+				<source src="../media/spyware-2.0.webm" type="video/webm" />
+				<source src="../media/spyware-2.0.ogv" type="video/ogg" />
 
-			<!-- text track file -->
-			<track kind="captions" label="English captions" src="../media/captions_PayPal_Austin_en.vtt" srclang="en" default />
+				<!-- text track file -->
+				<track kind="captions" label="English captions" src="../media/captions-spyware-2.0-en.vtt" srclang="en" default />
 
-			<!-- fallback for browsers that don't support the video element -->
-			<div>
-				<a href="../media/indie-launch.mp4">
-					<img src="../media/indie-launch.jpg" alt="download video" />
-				</a>
-			</div>
-		</video>
+				<!-- fallback for browsers that don't support the video element -->
+				<div>
+					<a href="../media/spyware-2.0.mp4">
+						<img src="../media/spyware-2.0.jpg" width="640" height="360" alt="download video" />
+					</a>
+				</div>
+			</video>
+		</div>
 	</div><!-- end container for captions and video -->
 	<div class="px-video-controls"></div>
 </div><!-- end video container -->
