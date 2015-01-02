@@ -1,4 +1,7 @@
-Copyright (c) 2014, eBay Software Foundation
+Original Work Copyright (c) 2014, eBay Software Foundation
+All rights reserved.
+
+Subsequent Work Copyright (c) 2014, Ind.ie
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification,

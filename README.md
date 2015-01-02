@@ -1,15 +1,13 @@
-<img src="images/logo_347x50_PPa11y.png" width="347" height="50" alt="PayPal accessibility logo" />
+#Responsive Accessible HTML5 Video Player
 
-#Accessible HTML5 Video Player
-
-## by the PayPal Accessibility Team
+## by Ind.ie, based on work by the PayPal Accessibility Team
 See the [Authors](#authors) section below for details.
 
 ## What is it?
-A lightweight HTML5 video player which includes support for captions and screen reader accessibility. For details, read the blog post [Introducing an Accessible HTML5 Video Player](https://www.paypal-engineering.com/2014/09/05/introducing-an-accessible-html5-video-player/) on the PayPal Engineering blog.
+A lightweight responsive HTML5 video player which includes support for captions and screen reader accessibility.
 
 ## Features
-- Provides an HTML5 video player with custom controls.
+- Provides a responsive HTML5 video player with custom controls.
 - Supports captions; simply denote a VTT caption file using the standard HTML5 video syntax.
 - Uses native HTML5 form controls for volume (range input) and progress indication (progress element).
 - Accessible to keyboard-only users and screen reader users.
@@ -33,20 +31,28 @@ Insert the HTML5 video markup in the Body of your HTML document. Replace the vid
 ```html
 <div class="px-video-container" id="myvid">
 	<div class="px-video-img-captions-container">
-		<div class="px-video-captions hide" aria-hidden="true"></div>
-		<video width="640" height="360" poster="media/foo.jpg" controls>
-			<source src="foo.mp4" type="video/mp4" />
-			<source src="foo.webm" type="video/webm" />
-			<track kind="captions" label="English captions" src="media/foo.vtt" srclang="en" default />
-			<div>
-				<a href="foo.mp4">
-					<img src="media/foo.jpg" width="640" height="360" alt="download video" />
-				</a>
-			</div>
-		</video>
-	</div>
+		<div class="px-video-captions hide"></div>
+		<div class="px-video-wrapper">
+			<video poster="../media/foo.jpg" class="px-video" controls>
+				<!-- video files -->
+				<source src="../media/foo.mp4" type="video/mp4" />
+				<source src="../media/foo.webm" type="video/webm" />
+				<source src="../media/foo.ogv" type="video/ogg" />
+
+				<!-- text track file -->
+				<track kind="captions" label="English captions" src="../media/captions-foo-en.vtt" srclang="en" default />
+
+				<!-- fallback for browsers that don't support the video element -->
+				<div>
+					<a href="../media/foo.mp4">
+						<img src="../media/foo.jpg" width="640" height="360" alt="download video" />
+					</a>
+				</div>
+			</video>
+		</div>
+	</div><!-- end container for captions and video -->
 	<div class="px-video-controls"></div>
-</div>
+</div><!-- end video container -->
 ```
 
 ###JavaScript
@@ -72,19 +78,17 @@ new InitPxVideo({
 </script>
 ```
 
-## Live Demo
-[View Demo](http://paypal.github.io/accessible-html5-video-player/)
+## Testing
+Due to Cross-Origin Resource Sharing (CORS), you'll need to run a web server in order to test the video player locally.
 
-## Feedback and Contributions
-If you experience any errors or if you have ideas for improvement, please feel free to open an issue or send a pull request.
-
-You can also follow and contact the PayPal Accessibility team on Twitter: [@PayPalInclusive](https://twitter.com/paypalinclusive)
-
-## Authors
+## Original Authors
 - Dennis Lembree, primary developer || [https://github.com/weboverhauls](https://github.com/weboverhauls) || [@dennisl](https://twitter.com/dennisl)
 - Victor Tsaran, consultation and testing || [https://github.com/vick08](https://github.com/vick08) || [@vick08](https://twitter.com/vick08)
 - Jason Gabriele, consultation
 - Tim Resudek, design
+
+## Ind.ie Authors
+- Laura Kalbag, design and development
 
 ## Browser Support
 - Chrome: full support.
@@ -100,12 +104,6 @@ You can also follow and contact the PayPal Accessibility team on Twitter: [@PayP
 - Only VTT caption files are supported (not SRT nor TTML). VTT cue settings are not supported but inline styles function (see first few lines of example).
 - The controls have a minimum width of 360px.
 
-## Related Resources
-- [HTML5 Video Events and API](http://www.w3.org/2010/05/video/mediaevents.html) - by W3C
-- [Adding captions and subtitles to HTML5 video](https://developer.mozilla.org/en-US/Apps/Build/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video#Internet_Explorer) - by MDN
-- [Simple SubRip to WebVTT converter](https://atelier.u-sub.net/srt2vtt/) - tool to convert SRT captions to WebVTT
-- [Able Player](https://github.com/terrill/ableplayer) - accessible cross-browser media player by Terrill Thompson
-
 ## Copyright and License
-Copyright 2014, eBay Software Foundation under [the BSD license](LICENSE.md).
-
+Original work copyright 2014, eBay Software Foundation under [the BSD license](LICENSE.md)
+Additional work copyright 2014, Ind.ie under [the BSD license](LICENSE.md)
