@@ -45,9 +45,9 @@ function InitPxVideo(options) {
 
 	// Display captions container and button (for initialization)
 	function showCaptionContainerAndButton(obj) {
-		obj.captionsBtnContainer.className = "px-video-captions-btn-container pull-left show";
+		obj.captionsBtnContainer.className = "px-video-captions-btn-container show";
 		if (obj.isCaptionDefault) {
-			obj.captionsContainer.className = "px-video-captions pull-left show";
+			obj.captionsContainer.className = "px-video-captions show";
 			obj.captionsBtn.setAttribute("checked", "checked");
 		}
 	}
