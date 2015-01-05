@@ -68,7 +68,14 @@
 .px-video-controls
 	margin-bottom 10px /* a little space below the player */
 	margin-top 10px /* put some spacing between video and controls to stop mis-tapping/clicking */
-	overflow hidden /* clear floats so controls don't get hidden by objects below */
+
+	&:after /* clear floats so controls don't get hidden by objects below */
+		display block;
+		font-size 0
+		content " "
+		clear both
+		height 0
+		visibility hidden
 
 /* progress indicator */
 .px-video-progress
@@ -98,6 +105,7 @@
 
 /* caption area */
 .px-video-captions
+	box-sizing border-box
 	position absolute
 	top 1px /* stop captions background showing above image */
 	left 0
@@ -173,7 +181,7 @@
 	background-position -11px -187px
 
 	&:hover, &:focus
-	background-position -11px -151px
+		background-position -11px -151px
 
 	@media only screen and (min-width: 620px)
 		background-position -11px -295px
@@ -237,6 +245,7 @@
 		display inline-block
 		width 25px
 		height 20px
+		margin-top 5px /* line up with big buttons */
 		background no-repeat url('../images/px-video-sprite.svg')
 		background-position -6px -835px
 
@@ -272,7 +281,6 @@
 		margin-top: 1px
 
 	@media only screen and (min-width: 620px)
-		margin-top: 7px /* line up with big buttons */
 		width 35%
 
 .px-video-mute-btn-container
@@ -283,7 +291,7 @@
 		display inline-block
 		width 25px
 		height 20px
-		margin-top 2px
+		margin-top 6px /* line up with big buttons */
 		background no-repeat url('../images/px-video-sprite.svg')
 		background-position -6px -476px
 
