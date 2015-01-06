@@ -32,31 +32,31 @@ Insert the HTML5 video markup in the Body of your HTML document. Replace the vid
 <div class="px-video-container" id="myvid">
 	<div class="px-video-img-captions-container">
 		<div class="px-video-captions hide"></div>
-		<div class="px-video-wrapper">
-			<video poster="../media/foo.jpg" class="px-video" controls>
-				<!-- video files -->
-				<source src="../media/foo.mp4" type="video/mp4" />
-				<source src="../media/foo.webm" type="video/webm" />
-				<source src="../media/foo.ogv" type="video/ogg" />
+			<div class="px-video-wrapper">
+				<video poster="../media/foo.jpg" class="px-video" controls>
+					<!-- video files -->
+					<source src="../media/foo.mp4" type="video/mp4" />
+					<source src="../media/foo.webm" type="video/webm" />
+					<source src="../media/foo.ogv" type="video/ogg" />
 
-				<!-- text track file -->
-				<track kind="captions" label="English captions" src="../media/captions-foo-en.vtt" srclang="en" default />
+					<!-- text track file -->
+					<track kind="captions" label="English captions" src="../media/captions-foo-en.vtt" srclang="en" default />
 
-				<!-- fallback for browsers that don't support the video element -->
-				<div>
-					<a href="../media/foo.mp4">
-						<img src="../media/foo.jpg" width="640" height="360" alt="download video" />
-					</a>
-				</div>
-			</video>
-		</div>
-	</div><!-- end container for captions and video -->
+					<!-- fallback for browsers that don't support the video element -->
+					<div>
+						<a href="../media/foo.mp4">
+							<img src="../media/foo.jpg" width="640" height="360" alt="download video" />
+						</a>
+					</div>
+				</video>
+			</div>
+		</div><!-- end container for captions and video -->
 	<div class="px-video-controls"></div>
 </div><!-- end video container -->
 ```
 
 ### JavaScript
-Insert the JavaScript file right before the closing Body element of your HTML document. Add a Script element to initialize the video. Options are passed in JSON format. The options are:
+Insert the JavaScript file right before the closing `</body>` element of your HTML document. Add a `<script>` element to initialize the video. Options are passed in JSON format. The options are:
 
 - videoId: the value of the ID of the widget container (string) [required]
 - captionsOnDefault: denotes whether to show or hide caption upon loading (boolean) [optional, default is true]
@@ -70,9 +70,9 @@ Insert the JavaScript file right before the closing Body element of your HTML do
 // Initialize
 new InitPxVideo({
 	"videoId": "myvid",
-	"captionsOnDefault": true,
+	"captionsOnDefault": false,
 	"seekInterval": 20,
-	"videoTitle": "clips of stand-up comedy",
+	"videoTitle": "Spyware 2.0",
 	"debug": true
 });
 </script>
@@ -102,7 +102,7 @@ Due to Cross-Origin Resource Sharing (CORS), you'll need to run a web server in 
 ## Limitations and Known Issues
 - Currently, only one caption file per video is supported.
 - Only VTT caption files are supported (not SRT nor TTML). VTT cue settings are not supported but inline styles function (see first few lines of example).
-- The controls have a minimum width of 360px.
+- Colour of the progress indicator is currently limited to the defaults provided by the browser.
 
 ## Copyright and License
 Original work copyright 2014, eBay Software Foundation under [the BSD license](LICENSE.md)
