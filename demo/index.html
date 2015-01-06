@@ -23,16 +23,16 @@
 		<div class="px-video-wrapper">
 			<video poster="../media/spyware-2.0.jpg" class="px-video" controls>
 				<!-- video files -->
-				<source src="../media/spyware-2.0.mp4" type="video/mp4" />
-				<source src="../media/spyware-2.0.webm" type="video/webm" />
-				<source src="../media/spyware-2.0.ogv" type="video/ogg" />
+				<source src="//videos.ind.ie/spyware-2.0/spyware-2.0.mp4" type="video/mp4" />
+				<source src="//videos.ind.ie/spyware-2.0/spyware-2.0.webm" type="video/webm" />
+				<source src="//videos.ind.ie/spyware-2.0/spyware-2.0.ogv" type="video/ogg" />
 
 				<!-- text track file -->
 				<track kind="captions" label="English captions" src="../media/captions-spyware-2.0-en.vtt" srclang="en" default />
 
 				<!-- fallback for browsers that don't support the video element -->
 				<div>
-					<a href="../media/spyware-2.0.mp4">
+					<a href="//videos.ind.ie/spyware-2.0/spyware-2.0.mp4">
 						<img src="../media/spyware-2.0.jpg" width="640" height="360" alt="download video" />
 					</a>
 				</div>
@@ -51,20 +51,11 @@
 // Initialize
 var video1 = new InitPxVideo({
 	"videoId": "myvid",
-	"captionsOnDefault": true,
+	"captionsOnDefault": false,
 	"seekInterval": 20,
 	"videoTitle": "Ind.ie Launch",
 	"debug": true
 });
-
-// For a second video, use this: (and comment out CC stuff in JS for now)
-// var video2 = new InitPxVideo({
-// 	"videoId": "anothervid",
-// 	"captionsOnDefault": true,
-// 	"seekInterval": 20,
-// 	"videoTitle": "Ind.ie Launch",
-// 	"debug": true
-// });
 
 </script>
 
