@@ -19,8 +19,19 @@ A lightweight responsive HTML5 video player which includes support for captions 
 
 ## Implementation
 
+### Preparing your videos
+For the videos to work across as many browsers as possible, you’ll need at least the following formats:
+- .mp4
+- .webm
+- .ogv
+
+To convert videos into these formats, I recommend the [Miro Video Converter](http://www.mirovideoconverter.com) or [Handbrake](https://handbrake.fr). After converting, check the audio and picture for the videos are working correctly. Sometimes conversions can result in a loss of picture, or strange green picture. If this happens, converting again can solve the problem.
+
+### Preparing your captions
+I wrote a [blog post about how I created captions for our Spyware 2.0 video](https://ind.ie/about/blog/accessible-video-player). A couple of recommended caption timestamping tools are [Subtitle Horse](http://www.subtitle-horse.com/) and [Jubler](http://www.jubler.org/). This [caption format converter](http://www.3playmedia.com/services-features/tools/captions-format-converter/) can convert different caption file formats to the required .vtt (Web VTT) format.
+
 ### CSS and Image
-Insert the CSS in the Head of your HTML document. You'll also need to upload the sprite image (or use your own) and adjust the path in the CSS file.
+Insert the CSS in the Head of your HTML document. You'll also need to upload the sprite images (or use your own) and adjust the path in the CSS file.
 
 ```html
 <link rel="stylesheet" href="/css/px-video.css" />
@@ -28,6 +39,8 @@ Insert the CSS in the Head of your HTML document. You'll also need to upload the
 
 ### HTML
 Insert the HTML5 video markup in the Body of your HTML document. Replace the video, poster, and caption URLs. Modify the sizes of video and fallback image as needed.
+
+If you dont have captions, just don't include the `<track>` element.
 ```html
 <div class="px-video-container" id="myvid">
 	<div class="px-video-img-captions-container">
