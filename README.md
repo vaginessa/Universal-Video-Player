@@ -25,10 +25,10 @@ For the videos to work across as many browsers as possible, you’ll need at lea
 - .webm
 - .ogv
 
+To convert videos into these formats, I recommend the [Miro Video Converter](http://www.mirovideoconverter.com) or [Handbrake](https://handbrake.fr). After converting, check the audio and picture for the videos are working correctly. Sometimes conversions can result in a loss of picture, or strange green picture. If this happens, converting again can solve the problem.
+
 #### HTTP Live Streaming
 Apple has an [HTTP Live Streaming format](https://developer.apple.com/streaming/). For this you’ll need to add the source as a .m3u8 file with the `application/x-mpegURL` source type.
-
-To convert videos into these formats, I recommend the [Miro Video Converter](http://www.mirovideoconverter.com) or [Handbrake](https://handbrake.fr). After converting, check the audio and picture for the videos are working correctly. Sometimes conversions can result in a loss of picture, or strange green picture. If this happens, converting again can solve the problem.
 
 ### Preparing your captions
 I wrote a [blog post about how I created captions for our Spyware 2.0 video](https://ind.ie/about/blog/accessible-video-player). A couple of recommended caption timestamping tools are [Subtitle Horse](http://www.subtitle-horse.com/) and [Jubler](http://www.jubler.org/). This [caption format converter](http://www.3playmedia.com/services-features/tools/captions-format-converter/) can convert different caption file formats to the required .vtt (Web VTT) format.
