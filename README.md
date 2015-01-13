@@ -25,6 +25,9 @@ For the videos to work across as many browsers as possible, you’ll need at lea
 - .webm
 - .ogv
 
+#### HTTP Live Streaming
+Apple has an [HTTP Live Streaming format](https://developer.apple.com/streaming/). For this you’ll need to add the source as a .m3u8 file with the `application/x-mpegURL` source type.
+
 To convert videos into these formats, I recommend the [Miro Video Converter](http://www.mirovideoconverter.com) or [Handbrake](https://handbrake.fr). After converting, check the audio and picture for the videos are working correctly. Sometimes conversions can result in a loss of picture, or strange green picture. If this happens, converting again can solve the problem.
 
 ### Preparing your captions
@@ -48,6 +51,9 @@ If you dont have captions, just don't include the `<track>` element.
 			<div class="px-video-wrapper">
 				<video poster="../media/foo.jpg" class="px-video" controls>
 					<!-- video files -->
+					<!-- HTTP Live Streaming -->
+					<source src="../media/foo.m3u8" type="application/x-mpegURL" />
+					<!-- Standard video files -->
 					<source src="../media/foo.mp4" type="video/mp4" />
 					<source src="../media/foo.webm" type="video/webm" />
 					<source src="../media/foo.ogv" type="video/ogg" />
