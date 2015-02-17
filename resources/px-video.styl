@@ -245,13 +245,17 @@
 		display inline-block
 		width 25px
 		height 20px
-		margin-top 5px /* line up with big buttons */
+		margin-top 3px /* line up with big buttons */
 		background no-repeat url('../images/px-video-sprite.svg')
 		background-position -6px -835px
+
+		@media only screen and (min-width: 540px)
+			margin-top 4px /* line up with big buttons */
 
 		.no-svg &
 			/* use with Modernizr to provide a no-svg class on <html> to support browsers that don't support SVG */
 			background no-repeat url('../images/px-video-sprite.png')
+
 
 .px-video-captions-btn-container
 	input[type="checkbox"]:focus+label
@@ -272,28 +276,27 @@
 
 /* mute button */
 .px-video-volume-controls
-	float right
+	float left
 	overflow hidden
 	min-width 133px /* width of mute button and width of volume slider */
-	width 50% /* half width of player */
 
 	@media only screen and (min-width: 540px)
 		margin-top: 1px
 
-	@media only screen and (min-width: 620px)
-		width 35%
-
 .px-video-mute-btn-container
-	float right
+	float left
 	width 26px /* width of mute button */
 
 	label
 		display inline-block
 		width 25px
 		height 20px
-		margin-top 6px /* line up with big buttons */
+		margin-top 3px /* line up with big buttons */
 		background no-repeat url('../images/px-video-sprite.svg')
 		background-position -6px -476px
+
+		@media only screen and (min-width: 540px)
+			margin-top 6px /* line up with big buttons */
 
 		.no-svg &
 			/* use with Modernizr to provide a no-svg class on <html> to support browsers that don't support SVG */
@@ -323,7 +326,7 @@
 
 /* volume range input */
 .px-video-volume-slider
-	float right
+	float left
 	width 95px /* width of volume slider */
 
 .px-video-controls .controls
@@ -333,11 +336,14 @@
 		-webkit-appearance none
 		height 6px
 		width 85px
-		margin-top 12px
+		margin-top 9px
 		margin-right 0
 		margin-left 5px
 		background-color #E6E6E6
 		outlinenone
+
+		@media only screen and (min-width: 540px)
+			margin-top 12px
 
 	input[type='range']:focus::-webkit-slider-thumb
 		outline 1px #999 dotted
