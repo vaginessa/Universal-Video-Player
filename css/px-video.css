@@ -227,91 +227,91 @@
 
 /* rewind button */
 .px-video-controls button.px-video-rewind {
-	background-position: -11px -187px;
+	background-position: -9px -187px;
 }
 
 @media only screen and (min-width: 620px) {
 	.px-video-controls button.px-video-rewind {
-		background-position: -11px -295px;
+		background-position: -9px -295px;
 	}
 }
 
 .px-video-controls button.px-video-rewind:hover,
 .px-video-controls button.px-video-rewind:focus {
-	background-position: -11px -151px;
+	background-position: -9px -151px;
 }
 
 @media only screen and (min-width: 620px) {
 	.px-video-controls button.px-video-rewind:hover,
 	.px-video-controls button.px-video-rewind:focus {
-		background-position: -11px -238px;
+		background-position: -9px -238px;
 	}
 }
 
 /* play button */
 .px-video-controls button.px-video-play {
-	background-position: -11px -43px;
+	background-position: -8px -43px;
 }
 
 @media only screen and (min-width: 620px) {
 	.px-video-controls button.px-video-play {
-		background-position: -11px -67px;
+		background-position: -8px -67px;
 	}
 }
 
 .px-video-controls button.px-video-play:hover,
 .px-video-controls button.px-video-play:focus {
-	background-position: -11px -7px;
+	background-position: -8px -7px;
 }
 
 @media only screen and (min-width: 620px) {
 	.px-video-controls button.px-video-play:hover,
 	.px-video-controls button.px-video-play:focus {
-		background-position: -11px -10px;
+		background-position: -8px -10px;
 	}
 }
 
 /* pause button */
 .px-video-controls button.px-video-pause {
-	background-position: -11px -115px;
+	background-position: -9px -115px;
 }
 .px-video-controls button.px-video-pause:hover,
 .px-video-controls button.px-video-pause:focus {
-	background-position: -11px -79px;
+	background-position: -9px -79px;
 }
 
 @media only screen and (min-width: 620px) {
 	.px-video-controls button.px-video-pause {
-		background-position: -11px -182px;
+		background-position: -9px -182px;
 	}
 }
 
 @media only screen and (min-width: 620px) {
 	.px-video-controls button.px-video-pause:hover,
 	.px-video-controls button.px-video-pause:focus {
-		background-position: -11px -124px;
+		background-position: -9px -124px;
 	}
 }
 
 /* forward button */
 .px-video-controls button.px-video-forward {
-	background-position: -13px -259px;
+	background-position: -10px -259px;
 }
 .px-video-controls button.px-video-forward:hover,
 .px-video-controls button.px-video-forward:focus {
-	background-position: -13px -223px;
+	background-position: -10px -223px;
 }
 
 @media only screen and (min-width: 620px) {
 	.px-video-controls button.px-video-forward {
-		background-position: -13px -409px;
+		background-position: -10px -409px;
 	}
 }
 
 @media only screen and (min-width: 620px) {
 	.px-video-controls button.px-video-forward:hover,
 	.px-video-controls button.px-video-forward:focus {
-		background-position: -13px -352px;
+		background-position: -10px -352px;
 	}
 }
 
@@ -432,7 +432,7 @@
 	-webkit-appearance: none;
 	height: 6px;
 	width: 85px;
-	margin-top: 8px;
+	margin-top: 12px;
 	margin-right: 0;
 	margin-left: 5px;
 	background-color: #E6E6E6;
