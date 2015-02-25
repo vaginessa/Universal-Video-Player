@@ -1,12 +1,24 @@
 # Responsive Accessible HTML5 Video Player
 
 ## by Ind.ie, based on work by the PayPal Accessibility Team
+
 See the [Authors](#authors) section below for details.
 
 ## What is it?
+
 A lightweight responsive HTML5 video player which includes support for captions and screen reader accessibility.
 
+## Getting started
+
+If you’re on a Mac or Linux-based system:
+
+  1. [Clone the Git repository.](https://source.ind.ie/project/video-player)
+  2. Run ```./demo```
+
+_(On other platforms, or if the demo script doesn’t run because Python is not installed, start a web server with the project folder as root and open it up in a browser.)_
+
 ## Features
+
 - Provides a responsive HTML5 video player with custom controls.
 - Supports captions; simply denote a VTT caption file using the standard HTML5 video syntax.
 - Uses native HTML5 form controls for volume (range input) and progress indication (progress element).
@@ -20,6 +32,7 @@ A lightweight responsive HTML5 video player which includes support for captions 
 ## Implementation
 
 ### Preparing your videos
+
 For the videos to work across as many browsers as possible, you’ll need at least the following formats:
 - .mp4
 - .webm
@@ -28,12 +41,15 @@ For the videos to work across as many browsers as possible, you’ll need at lea
 To convert videos into these formats, I recommend the [Miro Video Converter](http://www.mirovideoconverter.com) or [Handbrake](https://handbrake.fr). After converting, check the audio and picture for the videos are working correctly. Sometimes conversions can result in a loss of picture, or strange green picture. If this happens, converting again can solve the problem.
 
 #### HTTP Live Streaming
+
 Apple has an [HTTP Live Streaming format](https://developer.apple.com/streaming/). For this you’ll need to add the source as a .m3u8 file with the `application/x-mpegURL` source type.
 
 ### Preparing your captions
+
 I wrote a [blog post about how I created captions for our Spyware 2.0 video](https://ind.ie/about/blog/accessible-video-player). A couple of recommended caption timestamping tools are [Subtitle Horse](http://www.subtitle-horse.com/) and [Jubler](http://www.jubler.org/). This [caption format converter](http://www.3playmedia.com/services-features/tools/captions-format-converter/) can convert different caption file formats to the required .vtt (Web VTT) format.
 
 ### CSS and Image
+
 Insert the CSS in the Head of your HTML document. You'll also need to upload the sprite images (or use your own) and adjust the path in the CSS file.
 
 ```html

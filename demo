@@ -1,0 +1,53 @@
+######################################################################
+#
+# Little demo server script.
+#
+# Copyright © 2015 Aral Balkan. Released under the MIT License.
+#
+# Run a simple Python-based web server to show the demo.
+#
+######################################################################
+
+# Make errors abort the script so they don’t cascade.
+set -e
+
+#
+# Check if we were asked to stop the server.
+#
+while getopts ":s" opt; do
+  case $opt in
+    s)
+      printf "Stopping the demo server… " >&2
+      demoServerPID=$(pgrep -f 4200)
+      if [ ! -z "$demoServerPID" ]; then
+     	kill $demoServerPID >&2
+     	printf "done.\n"
+      else
+        printf "Demo server wasn’t running.\n"
+      fi
+      exit
+      ;;
+    \?)
+      echo "Invalid option: -$OPTARG" >&2
+      ;;
+  esac
+done
+
+#
+# Start the demo server. 
+#
+echo "Starting Universal Video Player demo at http://localhost:4200…\n"
+python -m SimpleHTTPServer 4200 >&2 &
+
+# Give the server time to come up.
+sleep 1 
+
+# Open the demo in the browser.
+open http://localhost:4200 >&2
+
+#
+# Let the user know how to shut the server off.
+#
+echo "╔══════════════════════════════════════════════════════════════════╗"
+echo "║    Type ./demo -s <enter> at any time to stop the web server.    ║"
+echo "╚══════════════════════════════════════════════════════════════════╝"
