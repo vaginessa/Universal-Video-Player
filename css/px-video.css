@@ -17,6 +17,7 @@
 
 /* video */
 .px-video-container {
+	overflow: hidden; /* ensure height of video doesn't overlap elements below */
 	min-width: 300px; /* so video controls don't fall in on themselves in narrow browsers */
 }
 
