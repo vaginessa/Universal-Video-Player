@@ -138,11 +138,11 @@ function InitPxVideo(options) {
 			obj.movie.setAttribute('height', '100%'); 
 		} else {
 			obj.fullScreenBtn.checked = false;
-	    // revert back to default styles
-	    obj.container.setAttribute("style", "width:" + obj.movieWidth + "px");
+		// revert back to default styles
+			// obj.container.setAttribute("style", "width:" + obj.movieWidth + "px");
 			obj.controls.className = "px-video-controls"; 
 			obj.captionsContainer.className = "px-video-captions";
-	    obj.movie.setAttribute('width', obj.movieWidth); 
+			obj.movie.setAttribute('width', obj.movieWidth); 
 			obj.movie.setAttribute('height', obj.movieHeight);
 		}
 	}
