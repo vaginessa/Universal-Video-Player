@@ -238,8 +238,15 @@
 	width 25px
 	height 20px
 	margin-left 10px
-	background no-repeat url('../images/px-video-sprite.png')
+	background no-repeat url('../images/px-video-sprite.svg')
 	background-position -6px -907px
+
+	@media only screen and (min-width: 540px)
+		margin-top 4px /* line up with big buttons */
+
+	.no-svg &
+		/* use with Modernizr to provide a no-svg class on <html> to support browsers that don't support SVG */
+		background no-repeat url('../images/px-video-sprite.png')
 
 .px-video-fullscreen-btn-container input[type="checkbox"]:focus+label
 	outline 1px #999 dotted
