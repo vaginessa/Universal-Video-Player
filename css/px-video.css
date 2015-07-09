@@ -132,8 +132,7 @@
 .px-video-playback-buttons {
   float: left;
   line-height: 20px;
-  min-width: 140px;
-  width: 50%;
+  min-width: 145px;
 }
 @media only screen and (min-width: 620px) {
   .px-video-playback-buttons {
@@ -146,7 +145,7 @@
   }
 }
 .px-video-controls button {
-  border: 1px #fff solid;
+  border: 1px transparent solid;
   background: transparent;
   padding: 0;
   margin: 0 5px;
@@ -262,34 +261,39 @@
     background-position: -10px -352px;
   }
 }
+.px-video-fullscreen-btn-container {
+  float: left;
+  width: 25px;
+}
 .px-video-fullscreen-btn-container label {
   display: inline-block;
   width: 25px;
   height: 20px;
-  margin-left: 10px;
+  margin-top: 3px;
+  margin-left: 1px;
   background: no-repeat url("../images/px-video-sprite.svg");
-  background-position: -6px -907px;
+  background-position: -6px -943px;
 }
 @media only screen and (min-width: 540px) {
   .px-video-fullscreen-btn-container label {
-    margin-top: 4px;
+    margin-top: 5px;
   }
 }
-.no-svg .px-video-fullscreen-btn-container label {
+.no-svg .px-video-fullscreen-btn-container {
 /* use with Modernizr to provide a no-svg class on <html> to support browsers that don't support SVG */
   background: no-repeat url("../images/px-video-sprite.png");
 }
 .px-video-fullscreen-btn-container input[type="checkbox"]:focus+label {
   outline: 1px #999 dotted;
-  background-position: -6px -943px;
+  background-position: -6px -907px;
 }
 .px-video-fullscreen-btn-container input[type="checkbox"]:hover+label {
-  background-position: -6px -943px;
+  background-position: -6px -907px;
   cursor: pointer;
 }
 .px-video-fullscreen-btn-container input[type="checkbox"]:focus+label {
   outline: 1px #999 dotted;
-  background-position: -6px -943px;
+  background-position: -6px -907px;
 }
 .px-video-fullscreen-btn-container input[type="checkbox"]:checked+label {
   background-position: -6px -979px;
@@ -299,7 +303,7 @@
 }
 /* captions button */
 .px-video-captions-btn-container {
-  float: right;
+  float: left;
 }
 @media only screen and (min-width: 540px) {
   .px-video-captions-btn-container {
@@ -342,7 +346,7 @@
 }
 /* mute button */
 .px-video-volume-controls {
-  float: left;
+  float: right;
   overflow: hidden;
   min-width: 133px;
 }
@@ -394,7 +398,12 @@
 /* volume range input */
 .px-video-volume-slider {
   float: left;
-  width: 95px;
+  width: 80px;
+}
+@media only screen and (min-width: 540px) {
+  .px-video-volume-slider {
+    width: 95px;
+  }
 }
 .px-video-controls .controls {
   position: relative;
@@ -403,7 +412,7 @@
 .px-video-controls .controls input[type='range'] {
   -webkit-appearance: none;
   height: 6px;
-  width: 85px;
+  width: 70px;
   margin-top: 9px;
   margin-right: 0;
   margin-left: 5px;
@@ -413,6 +422,7 @@
 @media only screen and (min-width: 540px) {
   .px-video-controls .controls input[type='range'] {
     margin-top: 12px;
+    width: 85px;
   }
 }
 .px-video-controls .controls input[type='range']:focus::-webkit-slider-thumb {

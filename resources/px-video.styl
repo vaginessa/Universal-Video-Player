@@ -124,8 +124,7 @@
 .px-video-playback-buttons
 	float left
 	line-height 20px
-	min-width 140px /* accommodate width of buttons */
-	width 50% /* half width of player */
+	min-width 145px /* accommodate width of buttons */
 
 	@media only screen and (min-width: 620px)
 	/* centre the playback buttons when the viewport is wider */
@@ -138,7 +137,7 @@
 
 
 .px-video-controls button
-	border 1px #fff solid
+	border 1px transparent solid
 	background transparent
 	padding 0
 	margin 0 5px
@@ -233,16 +232,21 @@
 		&:hover, &:focus
 			background-position -10px -352px
 			
-.px-video-fullscreen-btn-container label
-	display inline-block
+.px-video-fullscreen-btn-container
+	float left
 	width 25px
-	height 20px
-	margin-left 10px
-	background no-repeat url('../images/px-video-sprite.svg')
-	background-position -6px -907px
+	
+	label
+		display inline-block
+		width 25px
+		height 20px
+		margin-top 3px
+		margin-left 1px
+		background no-repeat url('../images/px-video-sprite.svg')
+		background-position -6px -943px
 
-	@media only screen and (min-width: 540px)
-		margin-top 4px /* line up with big buttons */
+		@media only screen and (min-width: 540px)
+			margin-top 5px /* line up with big buttons */
 
 	.no-svg &
 		/* use with Modernizr to provide a no-svg class on <html> to support browsers that don't support SVG */
@@ -250,15 +254,15 @@
 
 .px-video-fullscreen-btn-container input[type="checkbox"]:focus+label
 	outline 1px #999 dotted
-	background-position -6px -943px
+	background-position -6px -907px
 
 .px-video-fullscreen-btn-container input[type="checkbox"]:hover+label
-	background-position -6px -943px
+	background-position -6px -907px
 	cursor pointer
 
 .px-video-fullscreen-btn-container input[type="checkbox"]:focus+label
 	outline 1px #999 dotted
-	background-position -6px -943px
+	background-position -6px -907px
 
 .px-video-fullscreen-btn-container input[type="checkbox"]:checked+label
 	background-position -6px -979px
@@ -270,7 +274,7 @@
 
 /* captions button */
 .px-video-captions-btn-container
-	float right
+	float left
 
 	@media only screen and (min-width: 540px)
 		clear none
@@ -312,7 +316,7 @@
 
 /* mute button */
 .px-video-volume-controls
-	float left
+	float right
 	overflow hidden
 	min-width 133px /* width of mute button and width of volume slider */
 
@@ -363,7 +367,10 @@
 /* volume range input */
 .px-video-volume-slider
 	float left
-	width 95px /* width of volume slider */
+	width 80px /* width of volume slider */
+	
+	@media only screen and (min-width: 540px)
+		width 95px /* width of volume slider */
 
 .px-video-controls .controls
 	position relative
@@ -371,7 +378,7 @@
 	input[type='range']
 		-webkit-appearance none
 		height 6px
-		width 85px
+		width 70px
 		margin-top 9px
 		margin-right 0
 		margin-left 5px
@@ -380,6 +387,7 @@
 
 		@media only screen and (min-width: 540px)
 			margin-top 12px
+			width 85px
 
 	input[type='range']:focus::-webkit-slider-thumb
 		outline 1px #999 dotted
