@@ -396,6 +396,7 @@
   background-color: #666;
 }
 .px-video-controls .controls input[type='range']::-moz-range-thumb {
+  background-color: #666;
   height: 12px;
   width: 8px;
 }
