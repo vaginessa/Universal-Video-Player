@@ -1,3 +1,194 @@
+.section--title {
+  border-top: 1px solid black-thirty;
+  clear: both;
+  font-size: 38px;
+  line-height: OneAndThreeQuartersLineHeights;
+  margin-top: OneAndAHalfLineHeights;
+  padding-top: OneLineHeight;
+}
+@media only screen and (min-width: 600px) {
+  .section--title {
+    font-size: 42px;
+    line-height: TwoLineHeights;
+    width: 100%;
+  }
+}
+.video-thumbnail {
+  clear: both;
+  margin-top: HalfLineHeight;
+  margin-bottom: HalfLineHeight;
+  overflow: hidden;
+}
+@media only screen and (min-width: 670px) {
+  .video-thumbnail img {
+    float: left;
+    margin-top: OneLineHeight;
+    width: 45%;
+  }
+}
+@media only screen and (min-width: 670px) {
+  .session--title,
+  .session--speaker,
+  .session--description,
+  .session--transcript,
+  .session--watch {
+    float: right;
+    margin-left: 5%;
+    width: 50%;
+  }
+}
+.session--watch .button {
+  max-width: 140px;
+}
+.session--title {
+  font-size: 27px;
+  line-height: OneAndAQuarterLineHeights;
+}
+.session--title a {
+  color: black-seventy;
+  text-decoration: none;
+}
+@media only screen and (min-width: 670px) {
+  .session--title {
+    margin-top: OneLineHeight;
+    margin-bottom: HalfLineHeight;
+  }
+}
+.session--speaker,
+.session--description,
+.session--transcript {
+  margin-bottom: HalfLineHeight;
+}
+.session--video {
+  margin-bottom: ThreeQuartersLineHeight;
+}
+.session--video .session--speaker {
+  clear: both;
+  float: none;
+  margin-left: 0;
+  margin-bottom: QuarterLineHeight;
+  text-align: center;
+  width: 100%;
+}
+.session--video p {
+  text-align: center;
+}
+.transcript h2 {
+  font-family: "Avenir Next", Avenir, 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 36px;
+  line-height: TwoLineHeights;
+  margin-top: OneLineHeight;
+}
+@media only screen and (min-width: 820px) {
+  .transcript h2 {
+    font-size: 42px;
+    line-height: ThreeLineHeights;
+  }
+}
+.transcript h3 {
+  font-weight: bold;
+  line-height: OneAndAHalfLineHeights;
+  margin-bottom: QuarterLineHeight;
+  font-size: 20px;
+}
+.transcript p {
+  word-wrap: break-word;
+}
+@media only screen and (min-width: 500px) {
+  .transcript p {
+    word-wrap: normal;
+  }
+}
+.transcript-navigation {
+  overflow: hidden;
+}
+.transcript-navigation ul {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-justify-content: center;
+  justify-content: center;
+  margin-bottom: 0;
+  margin-left: 0;
+  overflow: hidden;
+}
+.transcript-navigation ul li {
+  float: left;
+  -webkit-flex: none;
+  flex: none;
+  list-style-type: none;
+  margin-bottom: 0;
+}
+@media only screen and (min-width: 390px) {
+  .transcript-navigation ul li {
+    margin-right: HalfLineHeight;
+    margin-left: HalfLineHeight;
+  }
+}
+.transcript-navigation ul li a {
+  display: block;
+}
+.js .transcript-navigation {
+  overflow: visible;
+}
+#transcript-select {
+  float: right;
+  margin-left: OneLineHeight;
+}
+.transcript-navigation + h2 {
+  margin-top: OneLineHeight;
+}
+.transcript-note {
+  border-top: 1px solid black-thirty;
+  color: black-sixty;
+  font-style: italic;
+  padding-top: QuarterLineHeight;
+}
+.transcript-link {
+  display: block;
+  font-size: 15px;
+  float: right;
+  line-height: OneLineHeight;
+  margin-top: -10px;
+}
+@media only screen and (min-width: 620px) {
+  .transcript-link {
+    float: left;
+    font-size: 17px;
+  }
+}
+.transcript-link:after {
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+  visibility: hidden;
+}
+@media only screen and (min-width: 620px) {
+  .custom-controls .transcript-link {
+    margin-top: -44px;
+  }
+}
+.transcript-single {
+  border-bottom: 2px solid black-thirty;
+}
+.transcript-single.hidden {
+  display: none;
+}
+.session--watch {
+  margin-bottom: HalfLineHeight;
+}
+.session--watch .button {
+  background: black-sixty;
+  margin-top: QuarterLineHeight;
+}
+.session--watch .button:hover,
+.session--watch .button:active,
+.session--watch .button:focus {
+  background: black-seventy;
+}
 /* utilities */
 .sr-only {
   position: absolute !important;
@@ -28,6 +219,7 @@
   position: absolute;
   top: 0;
   left: 0;
+  margin-top: 0;
   width: 100%;
   height: 100%;
 }
@@ -395,7 +587,7 @@
 .px-video-mute-btn-container input[type="checkbox"]:checked:focus+label {
   background-position: -6px -656px;
 }
-/* volume range input */
+/* volume range input  */
 .px-video-volume-slider {
   float: left;
   width: 80px;
@@ -442,6 +634,7 @@
 }
 .px-video-controls .controls input[type='range']::-moz-range-thumb {
   background-color: #666;
+  border: none;
   height: 12px;
   width: 8px;
 }
