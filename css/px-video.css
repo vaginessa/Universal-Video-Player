@@ -207,12 +207,12 @@
 }
 /* video */
 .px-video-container {
-  overflow: hidden;
-  min-width: 300px;
+  overflow: hidden /* ensure height of video doesn't overlap elements below */;
+  min-width: 300px /* so video controls don't fall in on themselves in narrow browsers */;
 }
 .px-video-img-captions-container {
   position: relative;
-  padding-bottom: 56.25%;
+  padding-bottom: 56.25% /* 16:9 */;
   height: 0;
 }
 .px-video {
@@ -232,7 +232,7 @@
 }
 .px-video-wrapper {
   position: relative;
-  padding-bottom: 56.25%;
+  padding-bottom: 56.25% /* 16:9 */;
   height: 0;
   z-index: 1;
 }
@@ -248,12 +248,7 @@
 }
 @media only screen and (min-width: 480px) {
   .progress-bar {
-    width: 90%;
-  }
-}
-@media only screen and (min-width: 480px) {
-  .progress-bar {
-    width: 92.5%;
+    width: 89%;
   }
 }
 @media only screen and (min-width: 970px) {
@@ -267,8 +262,8 @@
   }
 }
 .px-video-controls {
-  margin-bottom: 10px;
-  margin-top: 10px;
+  margin-bottom: 10px /* a little space below the player */;
+  margin-top: 10px /* put some spacing between video and controls to stop mis-tapping/clicking */;
 }
 .px-video-controls:after {
   display: block;
@@ -301,14 +296,14 @@
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   float: right;
   line-height: 30px;
-  margin-top: -30px;
+  margin-top: -30px /* bring time up alongside progress timeline */;
   font-size: 14px;
 }
 /* caption area */
 .px-video-captions {
   box-sizing: border-box;
   position: absolute;
-  top: 1px;
+  top: 1px /* stop captions background showing above image */;
   left: 0;
   width: 100%;
   padding: 0.5em;
@@ -324,16 +319,16 @@
 .px-video-playback-buttons {
   float: left;
   line-height: 20px;
-  min-width: 145px;
+  min-width: 145px /* accommodate width of buttons */;
 }
 @media only screen and (min-width: 620px) {
   .px-video-playback-buttons {
     float: none;
     left: 50%;
-    margin-left: -120px;
+    margin-left: -120px /* half width of button container + width of repeat button, so play button is central */;
     min-width: 200px;
     position: absolute;
-    width: 200px;
+    width: 200px /* accommodate width of new, wider buttons */;
   }
 }
 .px-video-controls button {
@@ -468,7 +463,7 @@
 }
 @media only screen and (min-width: 540px) {
   .px-video-fullscreen-btn-container label {
-    margin-top: 5px;
+    margin-top: 5px /* line up with big buttons */;
   }
 }
 .no-svg .px-video-fullscreen-btn-container {
@@ -500,21 +495,21 @@
 @media only screen and (min-width: 540px) {
   .px-video-captions-btn-container {
     clear: none;
-    margin-top: 1px;
-    margin-left: 10px;
+    margin-top: 1px /* line up with buttons */;
+    margin-left: 10px /* space between volume slider and captions button */;
   }
 }
 .px-video-captions-btn-container label {
   display: inline-block;
   width: 25px;
   height: 20px;
-  margin-top: 3px;
+  margin-top: 3px /* line up with big buttons */;
   background: no-repeat url("../images/px-video-sprite.svg");
   background-position: -6px -835px;
 }
 @media only screen and (min-width: 540px) {
   .px-video-captions-btn-container label {
-    margin-top: 4px;
+    margin-top: 4px /* line up with big buttons */;
   }
 }
 .no-svg .px-video-captions-btn-container label {
@@ -540,7 +535,7 @@
 .px-video-volume-controls {
   float: right;
   overflow: hidden;
-  min-width: 133px;
+  min-width: 133px /* width of mute button and width of volume slider */;
 }
 @media only screen and (min-width: 540px) {
   .px-video-volume-controls {
@@ -549,19 +544,19 @@
 }
 .px-video-mute-btn-container {
   float: left;
-  width: 26px;
+  width: 26px /* width of mute button */;
 }
 .px-video-mute-btn-container label {
   display: inline-block;
   width: 25px;
   height: 20px;
-  margin-top: 3px;
+  margin-top: 3px /* line up with big buttons */;
   background: no-repeat url("../images/px-video-sprite.svg");
   background-position: -6px -476px;
 }
 @media only screen and (min-width: 540px) {
   .px-video-mute-btn-container label {
-    margin-top: 6px;
+    margin-top: 6px /* line up with big buttons */;
   }
 }
 .no-svg .px-video-mute-btn-container label {
@@ -590,11 +585,11 @@
 /* volume range input  */
 .px-video-volume-slider {
   float: left;
-  width: 80px;
+  width: 80px /* width of volume slider */;
 }
 @media only screen and (min-width: 540px) {
   .px-video-volume-slider {
-    width: 95px;
+    width: 95px /* width of volume slider */;
   }
 }
 .px-video-controls .controls {
