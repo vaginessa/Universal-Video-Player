@@ -592,11 +592,11 @@
     width: 95px /* width of volume slider */;
   }
 }
-.px-video-controls .controls {
+.px-video-controls {
   position: relative;
 /* fixing display for IE10+ */
 }
-.px-video-controls .controls input[type='range'] {
+.px-video-controls input[type='range'] {
   -webkit-appearance: none;
   height: 6px;
   width: 70px;
@@ -607,44 +607,120 @@
   outline: none;
 }
 @media only screen and (min-width: 540px) {
-  .px-video-controls .controls input[type='range'] {
+  .px-video-controls input[type='range'] {
     margin-top: 12px;
     width: 85px;
   }
 }
-.px-video-controls .controls input[type='range']:focus::-webkit-slider-thumb {
+.px-video-controls input[type='range']:focus::-webkit-slider-thumb {
   outline: 1px #999 dotted;
 }
-.px-video-controls .controls input[type='range']::-moz-range-track {
+.px-video-controls input[type='range']::-moz-range-track {
   -moz-appearance: none;
   height: 6px;
   background-color: #e6e6e6;
   border: none;
 }
-.px-video-controls .controls input[type='range']::-webkit-slider-thumb {
+.px-video-controls input[type='range']::-webkit-slider-thumb {
   -webkit-appearance: none !important;
   height: 10px;
   width: 6px;
   background-color: #666;
 }
-.px-video-controls .controls input[type='range']::-moz-range-thumb {
+.px-video-controls input[type='range']::-moz-range-thumb {
   background-color: #666;
   border: none;
   height: 12px;
   width: 8px;
 }
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-  .px-video-controls .controls input[type='range'] {
+  .px-video-controls input[type='range'] {
     position: relative;
     padding: 0;
     height: 8px;
     top: -3px;
   }
-  .px-video-controls .controls .px-video-time {
+  .px-video-controls .px-video-time {
     margin-top: 4px;
   }
-  .px-video-controls .controls .px-video-captions {
+  .px-video-controls .px-video-captions {
     padding: 8px;
     min-height: 36px;
+  }
+}
+/* 	FLEXBOX-ONLY CSS.
+	This will only work with the including modernizr.js script, which applies the 
+	.flexbox.flexwrap classes to the body element */
+.flexbox.flexwrap .px-video-controls {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+.flexbox.flexwrap .progress-bar {
+  flex-grow: 1;
+  width: 75%;
+}
+@media only screen and (min-width: 480px) {
+  .flexbox.flexwrap .progress-bar {
+    width: 75%;
+  }
+}
+@media only screen and (min-width: 590px) {
+  .flexbox.flexwrap .progress-bar {
+    width: 85%;
+  }
+}
+@media only screen and (min-width: 970px) {
+  .flexbox.flexwrap .progress-bar {
+    width: 85%;
+  }
+}
+@media only screen and (min-width: 1795px) {
+  .flexbox.flexwrap .progress-bar {
+    width: 85%;
+  }
+}
+.flexbox.flexwrap .px-video-progress {
+  margin-top: 10px;
+  width: 100%;
+}
+.flexbox.flexwrap .px-video-time {
+  flex-grow: 0;
+  flex-shrink: 0;
+  padding-left: 10px;
+  margin-top: 0;
+}
+.flexbox.flexwrap .px-video-playback-buttons {
+  flex-grow: 1;
+  min-width: auto;
+}
+@media only screen and (min-width: 620px) {
+  .flexbox.flexwrap .px-video-playback-buttons {
+    left: auto;
+    margin-left: auto;
+    min-width: auto;
+    position: relative;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: no-wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding-left: 180px;
+  }
+}
+.flexbox.flexwrap .px-video-controls button {
+  margin: 0;
+}
+.flexbox.flexwrap .px-video-volume-controls {
+  min-width: auto;
+}
+@media only screen and (min-width: 540px) {
+  .flexbox.flexwrap .px-video-volume-controls {
+    margin-top: 0;
   }
 }
