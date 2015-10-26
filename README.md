@@ -2,7 +2,7 @@
 
 ## by Ind.ie, based on work by the PayPal Accessibility Team
 
-See the [Authors](#authors) section below for details.
+See the Authors section below for details.
 
 ## What is it?
 
