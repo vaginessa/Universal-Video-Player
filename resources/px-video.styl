@@ -20,7 +20,7 @@
 		&:hover, &:active, &:focus
 			background black-seventy
 			
-/* utilities */
+// utilities
 .sr-only
 	position absolute !important
 	clip rect(1px, 1px, 1px, 1px)
@@ -36,14 +36,14 @@
 .show-inline
 	display inline-block
 
-/* video */
+// video
 .px-video-container
-	overflow hidden /* ensure height of video doesn't overlap elements below */
-	min-width 300px /* so video controls don't fall in on themselves in narrow browsers */
+	overflow hidden // ensure height of video doesn't overlap elements below
+	min-width 300px // so video controls don't fall in on themselves in narrow browsers
 
 .px-video-img-captions-container
 	position relative
-	padding-bottom 56.25% /* 16:9 */
+	padding-bottom 56.25% // 16:9
 	height 0
 
 .px-video
@@ -54,7 +54,7 @@
 	width 100%
 	height 100%
 
-/* containers */
+// containers
 .px-video-img-captions-container *
 	box-sizing border-box
 
@@ -63,7 +63,7 @@
 
 .px-video-wrapper
 	position relative
-	padding-bottom 56.25% /* 16:9 */
+	padding-bottom 56.25% // 16:9
 	height 0
 	z-index 1
 
@@ -87,10 +87,10 @@
 		width 97.5%
 
 .px-video-controls
-	margin-bottom 10px /* a little space below the player */
-	margin-top 10px /* put some spacing between video and controls to stop mis-tapping/clicking */
+	margin-bottom 10px // a little space below the player
+	margin-top 10px // put some spacing between video and controls to stop mis-tapping/clicking
 
-	&:after /* clear floats so controls don't get hidden by objects below */
+	&:after // clear floats so controls don't get hidden by objects below
 		display block;
 		font-size 0
 		content " "
@@ -98,7 +98,7 @@
 		height 0
 		visibility hidden
 
-/* progress indicator */
+// progress indicator
 .px-video-progress
 	display block
 	width 100%
@@ -106,7 +106,7 @@
 	height 10px
 
 .px-video-progress[value]
-	/* Reset the default appearance */
+	// Reset the default appearance
 	-webkit-appearance none
 	border none
 
@@ -116,19 +116,19 @@
 .px-video-progress[value]::-webkit-progress-value
 	background-color #009CDF
 
-/* time */
+// time
 .px-video-time
 	font-family "Helvetica Neue",Helvetica,Arial,sans-serif
 	float right
 	line-height 30px
-	margin-top -30px /* bring time up alongside progress timeline */
+	margin-top -30px // bring time up alongside progress timeline
 	font-size 14px
 
-/* caption area */
+// caption area
 .px-video-captions
 	box-sizing border-box
 	position absolute
-	top 1px /* stop captions background showing above image */
+	top 1px // stop captions background showing above image
 	left 0
 	width 100%
 	padding .5em
@@ -140,20 +140,20 @@
 	opacity 0.75
 	z-index 2
 
-/* buttons */
+// buttons
 .px-video-playback-buttons
 	float left
 	line-height 20px
-	min-width 145px /* accommodate width of buttons */
+	min-width 145px // accommodate width of buttons
 
 	@media only screen and (min-width: 620px)
-	/* centre the playback buttons when the viewport is wider */
+	// centre the playback buttons when the viewport is wider
 		float none
 		left 50%
-		margin-left -120px /* half width of button container + width of repeat button, so play button is central */
+		margin-left -120px // half width of button container + width of repeat button, so play button is central
 		min-width 200px
 		position absolute
-		width 200px /* accommodate width of new, wider buttons */
+		width 200px // accommodate width of new, wider buttons
 
 
 .px-video-controls button
@@ -171,7 +171,7 @@
 		width 40px
 		height 40px
 
-/* use with Modernizr to provide a no-svg class on <html> to support browsers that don't support SVG */
+// use with Modernizr to provide a no-svg class on <html> to support browsers that don't support SVG
 .no-svg .px-video-controls button
 	background no-repeat url('../images/px-video-sprite.png')
 
@@ -182,7 +182,7 @@
 .px-video-controls button
 	cursor pointer
 
-/* restart button */
+// restart button
 .px-video-controls button.px-video-restart
 	background-position -9px -331px
 
@@ -196,7 +196,7 @@
 		&:hover, &:focus
 			background-position -9px -466px
 
-/* rewind button */
+// rewind button
 .px-video-controls button.px-video-rewind
 	background-position -9px -187px
 
@@ -210,7 +210,7 @@
 			background-position -9px -238px
 
 
-/* play button */
+// play button
 .px-video-controls button.px-video-play
 	background-position -8px -43px
 
@@ -224,7 +224,7 @@
 			background-position -8px -10px
 
 
-/* pause button */
+// pause button
 .px-video-controls button.px-video-pause
 	background-position -9px -115px
 
@@ -239,7 +239,7 @@
 			background-position -9px -124px
 
 
-/* forward button */
+// forward button
 .px-video-controls button.px-video-forward
 	background-position -10px -259px
 
@@ -266,10 +266,10 @@
 		background-position -6px -943px
 
 		@media only screen and (min-width: 540px)
-			margin-top 5px /* line up with big buttons */
+			margin-top 5px // line up with big buttons
 
 	.no-svg &
-		/* use with Modernizr to provide a no-svg class on <html> to support browsers that don't support SVG */
+		// use with Modernizr to provide a no-svg class on <html> to support browsers that don't support SVG
 		background no-repeat url('../images/px-video-sprite.png')
 
 .px-video-fullscreen-btn-container input[type="checkbox"]:focus+label
@@ -292,28 +292,28 @@
 
 
 
-/* captions button */
+// captions button
 .px-video-captions-btn-container
 	float left
 
 	@media only screen and (min-width: 540px)
 		clear none
-		margin-top 1px /* line up with buttons */
-		margin-left 10px /* space between volume slider and captions button */
+		margin-top 1px // line up with buttons
+		margin-left 10px // space between volume slider and captions button
 
 	label
 		display inline-block
 		width 25px
 		height 20px
-		margin-top 3px /* line up with big buttons */
+		margin-top 3px // line up with big buttons
 		background no-repeat url('../images/px-video-sprite.svg')
 		background-position -6px -835px
 
 		@media only screen and (min-width: 540px)
-			margin-top 4px /* line up with big buttons */
+			margin-top 4px // line up with big buttons
 
 		.no-svg &
-			/* use with Modernizr to provide a no-svg class on <html> to support browsers that don't support SVG */
+			// use with Modernizr to provide a no-svg class on <html> to support browsers that don't support SVG
 			background no-repeat url('../images/px-video-sprite.png')
 
 
@@ -334,32 +334,32 @@
 		background-position -6px -871px
 
 
-/* mute button */
+// mute button
 .px-video-volume-controls
 	float right
 	overflow hidden
-	min-width 133px /* width of mute button and width of volume slider */
+	min-width 133px // width of mute button and width of volume slider
 
 	@media only screen and (min-width: 540px)
 		margin-top: 1px
 
 .px-video-mute-btn-container
 	float left
-	width 26px /* width of mute button */
+	width 26px // width of mute button
 
 	label
 		display inline-block
 		width 25px
 		height 20px
-		margin-top 3px /* line up with big buttons */
+		margin-top 3px // line up with big buttons
 		background no-repeat url('../images/px-video-sprite.svg')
 		background-position -6px -476px
 
 		@media only screen and (min-width: 540px)
-			margin-top 6px /* line up with big buttons */
+			margin-top 6px // line up with big buttons
 
 		.no-svg &
-			/* use with Modernizr to provide a no-svg class on <html> to support browsers that don't support SVG */
+			// use with Modernizr to provide a no-svg class on <html> to support browsers that don't support SVG
 			background no-repeat url('../images/px-video-sprite.png')
 
 .px-video-mute-btn-container
@@ -375,7 +375,7 @@
 		outline 1px #999 dotted
 		background-position -6px -440px
 
-	/* checked state of mute button */
+	// checked state of mute button
 	input[type="checkbox"]:checked+label
 		background-position -6px -692px
 
@@ -384,13 +384,13 @@
 		background-position -6px -656px
 
 
-/* volume range input  */
+// volume range input 
 .px-video-volume-slider
 	float left
-	width 80px /* width of volume slider */
+	width 80px // width of volume slider
 	
 	@media only screen and (min-width: 540px)
-		width 95px /* width of volume slider */
+		width 95px // width of volume slider
 
 .px-video-controls
 	position relative
@@ -430,7 +430,7 @@
 		height 12px
 		width 8px
 
-	/* fixing display for IE10+ */
+	// fixing display for IE10+
 	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
 		input[type='range']
 			position relative
@@ -443,21 +443,21 @@
 			padding 8px
 			min-height 36px
 			
-/* 	FLEXBOX-ONLY CSS.
-	This will only work with the including modernizr.js script, which applies the 
-	.flexbox.flexwrap classes to the body element */
+// 	FLEXBOX-ONLY CSS.
+//	This will only work with the including modernizr.js script, which applies the 
+//	.flexbox.flexwrap classes to the body element
 	
 .flexbox.flexwrap 
 	.px-video-controls
-		display flex // enables flex for all its children */
-		flex-direction row // arrange buttons/inputs in rows, not columns */
-		flex-wrap wrap // run rows from left-to-right, wrap overflowing items to next row */
-		justify-content space-between // stick buttons/inputs to left/right edges with excess space distributed between */
-		align-items center // horizontally centre rows inside container */
-		align-content center // horizontally centre all content inside container when there are multiple rows */
+		display flex // enables flex for all its children
+		flex-direction row // arrange buttons/inputs in rows, not columns
+		flex-wrap wrap // run rows from left-to-right, wrap overflowing items to next row
+		justify-content space-between // stick buttons/inputs to left/right edges with excess space distributed between
+		align-items center // horizontally centre rows inside container
+		align-content center // horizontally centre all content inside container when there are multiple rows
 	
 	.progress-bar
-		flex-grow 1 // flex to fill rest of available space */
+		flex-grow 1 // flex to fill rest of available space
 		width 75%
 
 		@media only screen and (min-width: 480px)
@@ -498,12 +498,11 @@
 			justify-content center // stick buttons/inputs to left/right edges with excess space distributed between
 			align-items center // horizontally centre rows inside container
 			align-content center // horizontally centre all content inside container when there are multiple rows
-			padding-left 180px
 			
 	.px-video-controls button
 		margin 0
-				
-	/* mute button */
+	
+	// mute button
 	.px-video-volume-controls
 		min-width auto
 
