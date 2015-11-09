@@ -21,7 +21,6 @@
 .session--watch .button:focus {
   background: black-seventy;
 }
-/* utilities */
 .sr-only {
   position: absolute !important;
   clip: rect(1px, 1px, 1px, 1px);
@@ -37,14 +36,13 @@
 .show-inline {
   display: inline-block;
 }
-/* video */
 .px-video-container {
-  overflow: hidden /* ensure height of video doesn't overlap elements below */;
-  min-width: 300px /* so video controls don't fall in on themselves in narrow browsers */;
+  overflow: hidden;
+  min-width: 300px;
 }
 .px-video-img-captions-container {
   position: relative;
-  padding-bottom: 56.25% /* 16:9 */;
+  padding-bottom: 56.25%;
   height: 0;
 }
 .px-video {
@@ -55,7 +53,6 @@
   width: 100%;
   height: 100%;
 }
-/* containers */
 .px-video-img-captions-container * {
   box-sizing: border-box;
 }
@@ -64,7 +61,7 @@
 }
 .px-video-wrapper {
   position: relative;
-  padding-bottom: 56.25% /* 16:9 */;
+  padding-bottom: 56.25%;
   height: 0;
   z-index: 1;
 }
@@ -94,8 +91,8 @@
   }
 }
 .px-video-controls {
-  margin-bottom: 10px /* a little space below the player */;
-  margin-top: 10px /* put some spacing between video and controls to stop mis-tapping/clicking */;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 .px-video-controls:after {
   display: block;
@@ -105,7 +102,6 @@
   height: 0;
   visibility: hidden;
 }
-/* progress indicator */
 .px-video-progress {
   display: block;
   width: 100%;
@@ -113,7 +109,6 @@
   height: 10px;
 }
 .px-video-progress[value] {
-/* Reset the default appearance */
   -webkit-appearance: none;
   border: none;
 }
@@ -123,19 +118,17 @@
 .px-video-progress[value]::-webkit-progress-value {
   background-color: #009cdf;
 }
-/* time */
 .px-video-time {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   float: right;
   line-height: 30px;
-  margin-top: -30px /* bring time up alongside progress timeline */;
+  margin-top: -30px;
   font-size: 14px;
 }
-/* caption area */
 .px-video-captions {
   box-sizing: border-box;
   position: absolute;
-  top: 1px /* stop captions background showing above image */;
+  top: 1px;
   left: 0;
   width: 100%;
   padding: 0.5em;
@@ -147,20 +140,19 @@
   opacity: 0.75;
   z-index: 2;
 }
-/* buttons */
 .px-video-playback-buttons {
   float: left;
   line-height: 20px;
-  min-width: 145px /* accommodate width of buttons */;
+  min-width: 145px;
 }
 @media only screen and (min-width: 620px) {
   .px-video-playback-buttons {
     float: none;
     left: 50%;
-    margin-left: -120px /* half width of button container + width of repeat button, so play button is central */;
+    margin-left: -120px;
     min-width: 200px;
     position: absolute;
-    width: 200px /* accommodate width of new, wider buttons */;
+    width: 200px;
   }
 }
 .px-video-controls button {
@@ -180,7 +172,6 @@
     height: 40px;
   }
 }
-/* use with Modernizr to provide a no-svg class on <html> to support browsers that don't support SVG */
 .no-svg .px-video-controls button {
   background: no-repeat url("../images/px-video-sprite.png");
 }
@@ -191,7 +182,6 @@
 .px-video-controls button {
   cursor: pointer;
 }
-/* restart button */
 .px-video-controls button.px-video-restart {
   background-position: -9px -331px;
 }
@@ -210,7 +200,6 @@
     background-position: -9px -466px;
   }
 }
-/* rewind button */
 .px-video-controls button.px-video-rewind {
   background-position: -9px -187px;
 }
@@ -227,7 +216,6 @@
     background-position: -9px -238px;
   }
 }
-/* play button */
 .px-video-controls button.px-video-play {
   background-position: -8px -43px;
 }
@@ -244,7 +232,6 @@
     background-position: -8px -10px;
   }
 }
-/* pause button */
 .px-video-controls button.px-video-pause {
   background-position: -9px -115px;
 }
@@ -263,7 +250,6 @@
     background-position: -9px -124px;
   }
 }
-/* forward button */
 .px-video-controls button.px-video-forward {
   background-position: -10px -259px;
 }
@@ -295,11 +281,10 @@
 }
 @media only screen and (min-width: 540px) {
   .px-video-fullscreen-btn-container label {
-    margin-top: 5px /* line up with big buttons */;
+    margin-top: 5px;
   }
 }
 .no-svg .px-video-fullscreen-btn-container {
-/* use with Modernizr to provide a no-svg class on <html> to support browsers that don't support SVG */
   background: no-repeat url("../images/px-video-sprite.png");
 }
 .px-video-fullscreen-btn-container input[type="checkbox"]:focus+label {
@@ -320,32 +305,30 @@
 .px-video-fullscreen-btn-container input[type="checkbox"]:checked:hover+label {
   background-position: -6px -1015px;
 }
-/* captions button */
 .px-video-captions-btn-container {
   float: left;
 }
 @media only screen and (min-width: 540px) {
   .px-video-captions-btn-container {
     clear: none;
-    margin-top: 1px /* line up with buttons */;
-    margin-left: 10px /* space between volume slider and captions button */;
+    margin-top: 1px;
+    margin-left: 10px;
   }
 }
 .px-video-captions-btn-container label {
   display: inline-block;
   width: 25px;
   height: 20px;
-  margin-top: 3px /* line up with big buttons */;
+  margin-top: 3px;
   background: no-repeat url("../images/px-video-sprite.svg");
   background-position: -6px -835px;
 }
 @media only screen and (min-width: 540px) {
   .px-video-captions-btn-container label {
-    margin-top: 4px /* line up with big buttons */;
+    margin-top: 4px;
   }
 }
 .no-svg .px-video-captions-btn-container label {
-/* use with Modernizr to provide a no-svg class on <html> to support browsers that don't support SVG */
   background: no-repeat url("../images/px-video-sprite.png");
 }
 .px-video-captions-btn-container input[type="checkbox"]:focus+label {
@@ -363,11 +346,10 @@
 .px-video-captions-btn-container input[type="checkbox"]:checked+label {
   background-position: -6px -871px;
 }
-/* mute button */
 .px-video-volume-controls {
   float: right;
   overflow: hidden;
-  min-width: 133px /* width of mute button and width of volume slider */;
+  min-width: 133px;
 }
 @media only screen and (min-width: 540px) {
   .px-video-volume-controls {
@@ -376,23 +358,22 @@
 }
 .px-video-mute-btn-container {
   float: left;
-  width: 26px /* width of mute button */;
+  width: 26px;
 }
 .px-video-mute-btn-container label {
   display: inline-block;
   width: 25px;
   height: 20px;
-  margin-top: 3px /* line up with big buttons */;
+  margin-top: 3px;
   background: no-repeat url("../images/px-video-sprite.svg");
   background-position: -6px -476px;
 }
 @media only screen and (min-width: 540px) {
   .px-video-mute-btn-container label {
-    margin-top: 6px /* line up with big buttons */;
+    margin-top: 6px;
   }
 }
 .no-svg .px-video-mute-btn-container label {
-/* use with Modernizr to provide a no-svg class on <html> to support browsers that don't support SVG */
   background: no-repeat url("../images/px-video-sprite.png");
 }
 .px-video-mute-btn-container input[type="checkbox"]:focus+label {
@@ -414,19 +395,17 @@
 .px-video-mute-btn-container input[type="checkbox"]:checked:focus+label {
   background-position: -6px -656px;
 }
-/* volume range input  */
 .px-video-volume-slider {
   float: left;
-  width: 80px /* width of volume slider */;
+  width: 80px;
 }
 @media only screen and (min-width: 540px) {
   .px-video-volume-slider {
-    width: 95px /* width of volume slider */;
+    width: 95px;
   }
 }
 .px-video-controls {
   position: relative;
-/* fixing display for IE10+ */
 }
 .px-video-controls input[type='range'] {
   -webkit-appearance: none;
@@ -480,9 +459,6 @@
     min-height: 36px;
   }
 }
-/* 	FLEXBOX-ONLY CSS.
-	This will only work with the including modernizr.js script, which applies the 
-	.flexbox.flexwrap classes to the body element */
 .flexbox.flexwrap .px-video-controls {
   display: flex;
   flex-direction: row;
@@ -542,11 +518,11 @@
     justify-content: center;
     align-items: center;
     align-content: center;
-    padding-left: 180px;
+    padding-left: 140px;
   }
 }
 .flexbox.flexwrap .px-video-controls button {
-  margin: 0;
+  margin: 0 5px;
 }
 .flexbox.flexwrap .px-video-volume-controls {
   min-width: auto;
