@@ -45,7 +45,6 @@ function InitPxVideo(options) {
 	// Display captions container and button (for initialization)
 	function showCaptionContainerAndButton(obj) {
 		obj.captionsBtnContainer.className = "px-video-captions-btn-container show";
-		obj.captionsBtnContainer.parentNode.className = "px-video-captions-btn-container show";
 		if (obj.isCaptionDefault) {
 			obj.captionsContainer.className = "px-video-captions show";
 			obj.captionsBtn.setAttribute("checked", "checked");
@@ -558,7 +557,7 @@ function InitPxVideo(options) {
 				if (track.kind === "captions") {
 					track.addEventListener("cuechange",function() {
 						if (this.activeCues[0]) {
-							if (this.activeCues[0].hasOwnProperty("text") || this.activeCues[0].text !== "") {
+							if (this.activeCues[0].hasOwnProperty("text")) {
 								obj.captionsContainer.innerHTML = this.activeCues[0].text;
 							}
 						}
