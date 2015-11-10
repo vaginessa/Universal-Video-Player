@@ -518,12 +518,12 @@
     justify-content: center;
     align-items: center;
     align-content: center;
-    padding-left: 146px;
+    padding-left: 96px;
   }
 }
 @media only screen and (min-width: 620px) {
   .flexbox.flexwrap .has-captions .px-video-playback-buttons {
-    padding-left: 180px;
+    padding-left: 130px;
   }
 }
 .flexbox.flexwrap .px-video-controls button {
