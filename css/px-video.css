@@ -404,9 +404,6 @@
     width: 95px;
   }
 }
-.px-video-controls {
-  position: relative;
-}
 .px-video-controls input[type='range'] {
   -webkit-appearance: none;
   height: 6px;
