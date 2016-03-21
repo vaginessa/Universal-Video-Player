@@ -138,6 +138,7 @@ Due to Cross-Origin Resource Sharing (CORS), you'll need to run a web server in 
 - Currently, only one caption file per video is supported.
 - Only VTT caption files are supported (not SRT nor TTML). VTT cue settings are not supported but inline styles function (see first few lines of example).
 - Colour of the progress indicator is currently limited to the defaults provided by the browser.
+- Take care to ensure the VTT file has UNIX line endings. Otherwise it can’t be processed by the player.
 
 ## Copyright and License
 Original work copyright 2014, eBay Software Foundation under [the BSD license](LICENSE.md)
