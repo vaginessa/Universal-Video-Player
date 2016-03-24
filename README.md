@@ -33,16 +33,22 @@ _(On other platforms, or if the demo script doesn’t run because Python is not 
 
 ### Preparing your videos
 
-For the videos to work across as many browsers as possible, you’ll need at least the following formats:
+For the videos to work across as many browsers as possible, you’ll need at least the following format:
 - .mp4
+
+To be compatible with earlier versions of browsers, you may also want to implement:
 - .webm
 - .ogv
+
+(But really these formats aren’t necessary nowadays. [See caniuse.com for more information](http://caniuse.com/#search=mp4).
 
 To convert videos into these formats, I recommend the [Miro Video Converter](http://www.mirovideoconverter.com) or [Handbrake](https://handbrake.fr). After converting, check the audio and picture for the videos are working correctly. Sometimes conversions can result in a loss of picture, or strange green picture. If this happens, converting again can solve the problem.
 
 #### HTTP Live Streaming
 
 Apple has an [HTTP Live Streaming format](https://developer.apple.com/streaming/). For this you’ll need to add the source as a .m3u8 file with the `application/x-mpegURL` source type.
+
+You may experience CORS issues if your HTTP Live Streaming file is hosted on Vimeo. (This is why we’ve disabled HTTP Live Streaming on the Ind.ie site for now.)
 
 ### Preparing your captions
 
